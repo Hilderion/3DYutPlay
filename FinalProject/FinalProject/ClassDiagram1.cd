@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FinalProject.ThrowYut">
+    <Position X="11.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAAABAAIAAAAIAAAACAAAAAAAAIAAAAAAAAAAAEAA=</HashCode>
+      <FileName>ThrowYut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.CornerPoint">
+    <Position X="6.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAIAAAAIAQAAAEAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CornerPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapAlter">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEIgwABAAAAAAAAAAAAQAAAIAAAAAAAAQAAAAAAAAAA=</HashCode>
+      <FileName>MapAlter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.FieldObject">
+    <Position X="4.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAgAAAAAAAAAAAAAAAAQAAAAAAACAAAUAAAAAAAI=</HashCode>
+      <FileName>MapObject\FieldObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapObject">
+    <Position X="4.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAAAAABAAAAABAAAAAAAAQAAACAAAAQAAAAAA=</HashCode>
+      <FileName>MapObject\MapObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MountainObject">
+    <Position X="6.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAACAAQAAAAAAAA=</HashCode>
+      <FileName>MapObject\MountainObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.UnderGroundObject">
+    <Position X="6.25" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAAAAAAAAAAAAAAIAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MapObject\UnderGroundObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.Program" Collapsed="true">
+    <Position X="9.25" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.Unit">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCCAAAQAAAAAAABBAAGAICAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Unit\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Malgun Gothic" Size="9" />
+</ClassDiagram>
