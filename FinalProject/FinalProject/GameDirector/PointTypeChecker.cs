@@ -12,7 +12,7 @@ namespace FinalProject.GameDirector
         UnderGroundObject underGroundObject = new UnderGroundObject();
         MountainObject mountainObject = new MountainObject();
 
-        private string _currentPoint;
+        public string _currentPoint;
 
         public string PointTypeCheck()
         {

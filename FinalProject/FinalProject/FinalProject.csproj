@@ -46,9 +46,13 @@
     <Compile Include="GameDirector\GoalChecker.cs" />
     <Compile Include="GameDirector\PointTypeChecker.cs" />
     <Compile Include="GameDirector\SkipChecker.cs" />
+    <Compile Include="GameDirector\TurnChecker.cs" />
     <Compile Include="MapObject\FieldObject.cs" />
     <Compile Include="MapObject\MapObject.cs" />
     <Compile Include="MapObject\MountainObject.cs" />
+    <Compile Include="Move\Move.cs" />
+    <Compile Include="Move\SelectUnit.cs" />
+    <Compile Include="Move\ThrowYut.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MapObject\UnderGroundObject.cs" />
