@@ -22,7 +22,8 @@ namespace FinalProject.GameDirector
         Unit _player2UnitGuard = new Unit(2, UnitTag.Guard);
         Unit _player2UnitScout = new Unit(2, UnitTag.Scout);
         #endregion
-
+        
+        //골 지점에 도착했을때 GoalCheck()를 실행
         public void GoalCheck()
         {
             if (_player1UnitScout.isGoaled == true

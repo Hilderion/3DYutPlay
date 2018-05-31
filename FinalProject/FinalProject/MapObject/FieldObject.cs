@@ -8,8 +8,6 @@ namespace FinalProject
 {
     class FieldObject : MapObject
     {
-
-        
         Random random = new Random();
         int mapStatus, attack, defense;
         bool statusUpDown;
