@@ -3,28 +3,29 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using FinalProject.GameDirector;
 
-namespace FinalProject.Move
+
+namespace FinalProject
 {
-    class Move
+    public class Move
     {
         String _positionTag;
-        PointTypeChecker pointTypeChecker = new PointTypeChecker();
-        SkipChecker skipChecker = new SkipChecker();
 
         public Move(String _positionTag)
         {
             this._positionTag = _positionTag;
         }
-        
+
+
+
         public void PointTypeCheck(String _positionTag, int input)
         {
-            
+
+
             SelectUnit selectUnit = new SelectUnit();
             Boolean selectUnitResult = selectUnit.SelectUnitResult(input);
 
-            if (_positionTag == "cornerPoint" || _positionTag == "topPoint")
+            if (_positionTag == "cornerpoint" || _positionTag == "topPoint")
             {
                 SelectDirection(input);
                 if (selectUnitResult == true)
@@ -32,9 +33,9 @@ namespace FinalProject.Move
                     ThrowNMove();
                 }
             }
-            else if (pointTypeChecker.PointTypeCheck() == "Well")
+            else if (_positionTag == "wellPoint")
             {
-                skipChecker._turnSkip = true;
+                Skip();
             }
             else
             {
@@ -87,7 +88,12 @@ namespace FinalProject.Move
 
 
 
-
         }
     }
 }
+
+
+
+
+
+

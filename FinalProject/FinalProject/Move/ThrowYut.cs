@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.Move
+
+namespace FinalProject
 {
-    class ThrowYut
+    public class ThrowYut
     {
         public int ThrowYutResult()
         {
@@ -15,5 +16,7 @@ namespace FinalProject.Move
             return result;
         }
     }
-
 }
+
+
+

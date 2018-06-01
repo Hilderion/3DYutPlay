@@ -4,11 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.Move
-{
-    class SelectUnit
-    {
 
+namespace FinalProject
+{
+    public class SelectUnit
+    {
         public Boolean SelectUnitResult(int selectUnit)
         {
             List<int> unitset = new List<int>();
@@ -19,7 +19,21 @@ namespace FinalProject.Move
             unitset.Add(4);
 
             return true;
-            
+
+
+
+
         }
+
+
+
+
     }
+
+
+
 }
+
+
+
+
