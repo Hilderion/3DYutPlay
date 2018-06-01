@@ -78,8 +78,6 @@ namespace FinalProject.MapPoint
                 return destination;
             }
 
-
-
         }
     }
 }

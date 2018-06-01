@@ -8,8 +8,6 @@ namespace FinalProject.MapPoint
 {
     class WellPoint : MapPoint
     {
-
-
         public WellPoint()
         {
             int pointdirection;//유닛에게 전달할 디렉션번호

@@ -8,11 +8,10 @@ namespace FinalProject.MapPoint
 {
     class SelectDirection
     {
-        public int Selectdirection(int corner)
+        public int SelectDirect(int corner)
         {
             int selectedDirection;
             String getDirection;
-
 
             if (corner == 1)
             {
@@ -39,7 +38,7 @@ namespace FinalProject.MapPoint
 
             }
             else
-            {
+            {//우물임
                 Console.WriteLine("Please select direction 8 or 9");
                 getDirection = Console.ReadLine();
                 selectedDirection = Convert.ToInt32(getDirection);

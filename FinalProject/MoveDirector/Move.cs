@@ -64,7 +64,7 @@ namespace FinalProject.MoveDirector
                 return movePoint;
                 //TODO : movepoint에 실제 말의 이동 넣어주기. return붙은것들
             }
-              if (movePoint != 0)
+              while (movePoint != 0)
                 {
                     //말의 이동
                     movePoint--; 

@@ -63,6 +63,8 @@
     <Compile Include="MoveDirector\ThrowYut.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RunningTest\RunProgram.cs" />
+    <Compile Include="RunningTest\TestUnit.cs" />
     <Compile Include="Unit\Unit.cs" />
   </ItemGroup>
   <ItemGroup>

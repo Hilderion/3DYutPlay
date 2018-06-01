@@ -7,42 +7,31 @@ using System.Threading.Tasks;
 namespace FinalProject.GameDirector
 {
     class PointTypeChecker
+        
     {
-        FieldObject fieldObject = new FieldObject();
-        UnderGroundObject underGroundObject = new UnderGroundObject();
-        MountainObject mountainObject = new MountainObject();
+        MapPoint.MapPoint mapPoint = new MapPoint.MapPoint();
 
-        public string _currentPoint;
 
         public string PointTypeCheck()
         {
-            if (mountainObject.getmapType() == "Mountain")
+            if (mapPoint.getPointType() == "Mountain")
             {
-                _currentPoint = "Mountain";
                 return "Mountain";
             }
 
-            else if (underGroundObject.getmapType() == "Under")
+            // TODO: under가 없다.
+            else if (mapPoint.getPointType() == "Under")
             {
-                _currentPoint = "UnderGround";
                 return "UnderGround";
             }
-
-            else if (fieldObject.getmapType() == "Field")
+            
+            else if (mapPoint.getPointType() == "Center")
             {
-                _currentPoint = "Field";
-                return "Field";
+                return "Center";
             }
 
-            else if (underGroundObject.getTag()== "Well")
+            else if (mapPoint.getPointType() == "Bandit")
             {
-                _currentPoint = "Well";
-                return "Well";
-            }
-
-            else if (mountainObject.getTag()=="Bandit")
-            {
-                _currentPoint = "Bandit";
                 return "Bandit";
             }
 

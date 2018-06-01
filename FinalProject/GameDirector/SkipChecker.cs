@@ -10,6 +10,9 @@ namespace FinalProject.GameDirector
     {
         public bool _turnSkip;
         PointTypeChecker pointTypeChecker = new PointTypeChecker();
+        MapPoint.MapPoint mapPoint = new MapPoint.MapPoint();
+
+
 
         public void TurnCheck()
         {
@@ -20,10 +23,10 @@ namespace FinalProject.GameDirector
                 return;
             }
 
-            else if (pointTypeChecker.PointTypeCheck() == "Well" && _turnSkip == false)
+
+            if (mapPoint.getPointType() == "Center")
             {
                 _turnSkip = true;
-
             }
 
         }

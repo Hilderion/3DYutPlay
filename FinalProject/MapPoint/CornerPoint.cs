@@ -8,7 +8,7 @@ namespace FinalProject.MapPoint
 {
     class CornerPoint : MapPoint
     {
-            int movepoint = 1;
+        int movepoint = 1;
         String cornerType;
 
         public CornerPoint()//각각의 모서리마다 개별로 지정(1,2,3번째+중앙)

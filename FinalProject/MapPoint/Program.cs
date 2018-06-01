@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace FinalProject.MapPoint
 {
-//    class Program
-//    {
+    class Program
+    {
 //        static void Main(string[] args)
 //        {
 //            List<int> test = new List<int> { 9, 0, 0 };
@@ -42,5 +42,5 @@ namespace FinalProject.MapPoint
 //            }
 //
 //        }
-//    }
+    }
 }
