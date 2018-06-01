@@ -1,13 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-namespace FinalProject
+namespace FinalProject.MoveDirector
 {
-    public class SelectUnit
+    class SelectUnit
     {
         public Boolean SelectUnitResult(int selectUnit)
         {
@@ -19,21 +15,7 @@ namespace FinalProject
             unitset.Add(4);
 
             return true;
-
-
-
-
+            
         }
-
-
-
-
     }
-
-
-
 }
-
-
-
-

@@ -1,31 +1,27 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using FinalProject.GameDirector;
 
-
-namespace FinalProject
+namespace FinalProject.MoveDirector
 {
-    public class Move
+    class Move
     {
         String _positionTag;
+        PointTypeChecker pointTypeChecker = new PointTypeChecker();
+        SkipChecker skipChecker = new SkipChecker();
 
-        public Move(String _positionTag)
+        ThrowYut throwYut = new ThrowYut();
+
+        public void Moving(String _positionTag)
         {
             this._positionTag = _positionTag;
         }
-
-
-
+        
         public void PointTypeCheck(String _positionTag, int input)
         {
-
-
             SelectUnit selectUnit = new SelectUnit();
             Boolean selectUnitResult = selectUnit.SelectUnitResult(input);
 
-            if (_positionTag == "cornerpoint" || _positionTag == "topPoint")
+            if (_positionTag == "cornerPoint" || _positionTag == "topPoint")
             {
                 SelectDirection(input);
                 if (selectUnitResult == true)
@@ -33,9 +29,9 @@ namespace FinalProject
                     ThrowNMove();
                 }
             }
-            else if (_positionTag == "wellPoint")
+            else if (pointTypeChecker.PointTypeCheck() == "Well")
             {
-                Skip();
+                skipChecker._turnSkip = true;
             }
             else
             {
@@ -48,7 +44,6 @@ namespace FinalProject
 
         public void ThrowNMove()
         {
-            ThrowYut throwYut = new ThrowYut();
             int result = throwYut.ThrowYutResult();
             RealMove(result);
         }
@@ -57,43 +52,25 @@ namespace FinalProject
         {
             //←, →, ↑ 각각의 방향키 입력 시 이동
         }
-
-        public void Skip()
+        
+        public int RealMove(int result)
         {
-
-            //턴스킵
-
-        }
-
-        public void RealMove(int result)
-        {
-
-
-            ThrowYut throwYut = new ThrowYut();
-            int movePoint = throwYut.ThrowYutResult();
+            int movePoint = result;
 
             if (movePoint == 6) //빽도
             {
                 //말의 이동
+                Console.WriteLine("6이나옴!!!!");
+                return movePoint;
+                //TODO : movepoint에 실제 말의 이동 넣어주기. return붙은것들
             }
-            else
-            {
-                while (movePoint != 0)
+              if (movePoint != 0)
                 {
                     //말의 이동
-                    movePoint--;
+                    movePoint--; 
                 }
-
-            }
-
-
-
+            
+            return movePoint;
         }
     }
 }
-
-
-
-
-
-

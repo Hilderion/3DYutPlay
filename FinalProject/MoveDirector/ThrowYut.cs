@@ -1,13 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-
-namespace FinalProject
+namespace FinalProject.MoveDirector
 {
-    public class ThrowYut
+    class ThrowYut
     {
         public int ThrowYutResult()
         {
@@ -16,7 +11,5 @@ namespace FinalProject
             return result;
         }
     }
+
 }
-
-
-
