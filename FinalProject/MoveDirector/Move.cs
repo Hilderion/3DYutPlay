@@ -15,7 +15,7 @@ namespace FinalProject.MoveDirector
         {
             this._positionTag = _positionTag;
         }
-        
+
         public void PointTypeCheck(String _positionTag, int input)
         {
             SelectUnit selectUnit = new SelectUnit();
@@ -52,7 +52,7 @@ namespace FinalProject.MoveDirector
         {
             //←, →, ↑ 각각의 방향키 입력 시 이동
         }
-        
+
         public int RealMove(int result)
         {
             int movePoint = result;
@@ -64,12 +64,12 @@ namespace FinalProject.MoveDirector
                 return movePoint;
                 //TODO : movepoint에 실제 말의 이동 넣어주기. return붙은것들
             }
-              if (movePoint != 0)
-                {
-                    //말의 이동
-                    movePoint--; 
-                }
-            
+            while(movePoint != 0)
+            {
+                //말의 이동
+                movePoint--;
+            }
+
             return movePoint;
         }
     }
