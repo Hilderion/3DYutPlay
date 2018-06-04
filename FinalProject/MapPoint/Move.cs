@@ -17,6 +17,7 @@ namespace FinalProject.MapPoint
         public List<int> Directionsetting(List<int> currentposition, int direction)
         {
             List<int> destination = new List<int>();
+
             if (direction == 1)
             {
                 currentposition[0] += 3;

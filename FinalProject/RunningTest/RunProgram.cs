@@ -14,18 +14,19 @@ namespace FinalProject.RunningTest
         static void Main(string[] args)
         {
             MapPoint.Move movingTest = new Move();
-            TestUnit testBot = new TestUnit();
-            ThrowYut th = new ThrowYut();
+            TestUnit testUnit = new TestUnit();
             MoveDirector.Move move = new MoveDirector.Move();
-            int str;
-            str =
-                move.RealMove(th.ThrowYutResult());
-
-            if (str == 1)
+            HowToGo going = new HowToGo();
+            
+            for (int i = 0; i < 9; i++)
             {
-                movingTest.Directionsetting(testBot.getPosition(), testBot.getDirection());
+                going.Directionsetting(testUnit.TestBot(), 1);
+
+                Console.WriteLine(testUnit.TestBot()[0] + " " + testUnit.TestBot()[0] + " " + testUnit.TestBot()[0]);
             }
-       
+
+            
+
 
         }
     }

@@ -8,10 +8,11 @@ namespace FinalProject.RunningTest
 {
     class TestUnit : MapPoint.MapPoint
     {
-        public void TestBot()
+        public List<int> TestBot()
         {
             setPosition(new List<int> { 0, 0, 0 });
             setDirection(1);
+            return getPosition();
 
         }
 
