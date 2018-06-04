@@ -25,9 +25,6 @@ namespace FinalProject.GameDirector
 
         TestUnit testUnit = new TestUnit();
 
-
-
-
         public void Player1Turn(List<double> player1, List<double> player2)
         {
             //TODO : 1윷던지기 2유닛선택 3이동 4.충돌 5.충돌결과 5.5스킵채크 6.턴종료

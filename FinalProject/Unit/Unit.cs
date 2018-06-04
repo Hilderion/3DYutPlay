@@ -10,23 +10,22 @@ namespace FinalProject
     {
         public int _Player { get; protected set; } //소유 플레이어
         public UnitTag unitTag { get; protected set; } //태그
-        
+
         public int _Attack { get; protected set; } //공격력
         public int _Defense { get; protected set; } //방어력
         public int _Speed { get; protected set; } //이동속도
 
         public bool isGoaled; //골인체크
 
-        public int[] FieldLocation { get; set; }
+        public List<int> UnitPosition { get; set; }
 
-        public List<int[]> LocationHistory;
-        int currentPosition;
+        public List<List<int>> LocationHistory;
 
         public Unit(int Player, UnitTag Tag)
         {
             _Player = Player;
             isGoaled = false;
-            FieldLocation = new int[3] { 0, 0, 0 };
+            UnitPosition.Add(0); UnitPosition.Add(0); UnitPosition.Add(0);
             unitTag = Tag;
 
             _Attack = 0; _Defense = 0; _Speed = 0;
@@ -45,6 +44,17 @@ namespace FinalProject
                     _Attack = 1; _Defense = -1; _Speed = 1;
                     break;
             }
+        }
+        protected Unit(Unit unit1, Unit unit2)
+        {
+        }
+
+        protected Unit(List<Unit> unitlist, Unit unit)
+        {
+        }
+
+        protected Unit(List<Unit> list1, List<Unit> list2)
+        {
         }
 
         public void AttackAdjust(int Amount)

@@ -25,9 +25,7 @@ namespace FinalProject.RunningTest
             for (int i = 0; i < 2; i++)
             {
                 actualGame.Player1Turn(testBot1,testBot2);
-                //위에걸 불러와야 하는데 안됨 지금.
-
-//                actualGame.Player1Turn(test1, test2);
+        
             }
 
         }

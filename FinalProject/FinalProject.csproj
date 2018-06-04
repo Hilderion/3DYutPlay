@@ -67,7 +67,9 @@
     <Compile Include="RunningTest\RealMove.cs" />
     <Compile Include="RunningTest\RunProgram.cs" />
     <Compile Include="RunningTest\TestUnit.cs" />
+    <Compile Include="Unit\Player.cs" />
     <Compile Include="Unit\Unit.cs" />
+    <Compile Include="Unit\UnitTeam.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
