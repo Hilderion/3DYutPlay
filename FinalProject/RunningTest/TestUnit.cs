@@ -16,5 +16,13 @@ namespace FinalProject.RunningTest
 
         }
 
+        public List<int> TestBot2()
+        {
+            setPosition(new List<int> { 0, 0, 0 });
+            setDirection(1);
+            return getPosition();
+
+        }
+
     }
 }

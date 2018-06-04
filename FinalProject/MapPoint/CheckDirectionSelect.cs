@@ -16,7 +16,7 @@ namespace FinalProject.MapPoint
 
         SelectDirection selectDirection = new SelectDirection();
 
-        public int CheckDirection(List<int> currentpositon)
+        public int CheckDirection(List<int> currentpositon, int savedirection)
         {
             if (currentpositon[0] == first[0] && currentpositon[1] == first[1] && currentpositon[2] == first[2])
             {
@@ -36,11 +36,13 @@ namespace FinalProject.MapPoint
                 return direction;
 
             }
-            else
+            else if (currentpositon[0] == well[0] && currentpositon[1] == well[1] && currentpositon[2] == well[2])
             {
                 direction = selectDirection.SelectDirect(4);
                 return direction;
             }
+            else
+                return savedirection;
 
         }
     }
