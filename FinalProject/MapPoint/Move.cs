@@ -14,9 +14,9 @@ namespace FinalProject.MapPoint
         //세번째 코너 - 4(기본적인 경우), 7(가운데로) : x증가/z감소
         //우물 - 8(출발점으로) : x,z감소, 9(세번째 코너로) : x감소 / z증가
 
-        public List<int> Directionsetting(List<int> currentposition, int direction)
+        public List<double> Directionsetting(List<double> currentposition, int direction)
         {
-            List<int> destination = new List<int>();
+            List<double> destination = new List<double>();
 
             if (direction == 1)
             {

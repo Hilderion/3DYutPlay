@@ -9,14 +9,14 @@ namespace FinalProject.MapPoint
     class CheckDirectionSelect
     {
         int direction;
-        List<int> first = new List<int> { 12, 0, 0 };
-        List<int> second = new List<int> { 12, 0, 12 };
-        List<int> third = new List<int> { 0, 0, 12 };
-        List<int> well = new List<int> { 6, 0, 6 };
+        List<double> first = new List<double> { 12, 0, 0 };
+        List<double> second = new List<double> { 12, 0, 12 };
+        List<double> third = new List<double> { 0, 0, 12 };
+        List<double> well = new List<double> { 6, 0, 6 };
 
         SelectDirection selectDirection = new SelectDirection();
 
-        public int CheckDirection(List<int> currentpositon, int savedirection)
+        public int CheckDirection(List<double> currentpositon, int savedirection)
         {
             if (currentpositon[0] == first[0] && currentpositon[1] == first[1] && currentpositon[2] == first[2])
             {

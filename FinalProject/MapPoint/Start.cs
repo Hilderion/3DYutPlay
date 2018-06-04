@@ -11,7 +11,7 @@ namespace FinalProject.MapPoint
         private void Initial()
         {
             setPointType("Start");
-            setPosition(new List<int> { 0, 0, 0 });
+            setPosition(new List<double> { 0, 0, 0 });
             setDirection(1);
         }
     }

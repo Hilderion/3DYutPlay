@@ -23,14 +23,16 @@ namespace FinalProject.GameDirector
         Random testRandom = new Random();
         RealMove realMove = new RealMove();
 
-        TestUnit testbot = new TestUnit(); 
+        TestUnit testUnit = new TestUnit();
 
 
-        public void Player1Turn()
+
+
+        public void Player1Turn(List<double> player1, List<double> player2)
         {
             //TODO : 1윷던지기 2유닛선택 3이동 4.충돌 5.충돌결과 5.5스킵채크 6.턴종료
 
-            realMove.ActualMove(testbot.TestBot(),1);
+            realMove.ActualMove(player1);
 
             Thread.Sleep(500);
 
@@ -60,19 +62,21 @@ namespace FinalProject.GameDirector
 
 
             Console.WriteLine("Player1" + " " + " Moved");
+
+            Console.WriteLine("플레이어1의"+" "+"위치"+" : "+player1[0]);
             Console.WriteLine("---------------------");
             _player1Moved = true;
             _player1TurnEnd = true;
 
             if (_player1TurnEnd == true)
             {
-                Player2Turn();
+                Player2Turn(player2);
                 _player2TurnEnd = false;
             }
 
         }
 
-        public void Player2Turn()
+        public void Player2Turn(List<double> player2)
         {
             Thread.Sleep(500);
 
@@ -80,7 +84,7 @@ namespace FinalProject.GameDirector
             //            int unitChose;
    
 
-            realMove.ActualMove(testbot.TestBot2(), 1);
+            realMove.ActualMove(player2);
 
 
             //            switch (selectUnit)
@@ -106,6 +110,8 @@ namespace FinalProject.GameDirector
 
 
             Console.WriteLine("Player2" + " " + " Moved");
+          
+            Console.WriteLine("플레이어2의" + " " + "위치" + " : " + player2[0]);
             Console.WriteLine("---------------------");
             _player2Moved = true;
             _player2TurnEnd = true;

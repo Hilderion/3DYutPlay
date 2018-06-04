@@ -15,7 +15,9 @@ namespace FinalProject.MapPoint
 
             if (corner == 1)
             {
+                Console.WriteLine("-------------------------------");
                 Console.WriteLine("Please select direction 2 or 5");
+                Console.WriteLine("-------------------------------");
                 getDirection = Console.ReadLine();
                 selectedDirection = Convert.ToInt32(getDirection);
                 return selectedDirection;

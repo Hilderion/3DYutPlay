@@ -12,7 +12,7 @@ namespace FinalProject.MapPoint
 
         public MountainPoint()
         {
-            setPosition(new List<int> { 3, 3, 3 });
+            setPosition(new List<double> { 3, 3, 3 });
             setPointType("Mountain");
             setDirection(6);
         }

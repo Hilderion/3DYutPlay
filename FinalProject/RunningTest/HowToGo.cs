@@ -9,9 +9,9 @@ namespace FinalProject.RunningTest
 {
     class HowToGo
     {
-        public List<int> Directionsetting(List<int> currentposition, int direction)
+        public List<double> Directionsetting(List<double> currentposition, int direction)
         {
-            List<int> destination = new List<int>();
+            List<double> destination = new List<double> ();
 
             if (direction == 1)
             {

@@ -13,7 +13,7 @@ namespace FinalProject.MapPoint
 
         public DefaultPoint()
         {
-            setPosition(new List<int> { 3, 0, 0 });
+            setPosition(new List<double> { 3, 0, 0 });
             setPointType("Default");
             setDirection(1);
             Random random = new Random();

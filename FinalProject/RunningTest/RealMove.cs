@@ -15,9 +15,9 @@ namespace FinalProject.RunningTest
         HowToGo going = new HowToGo();
         MapPoint.CheckDirectionSelect checkDirectionSelect = new MapPoint.CheckDirectionSelect();
         int _throwYutResult;
+        private int checkeddirection;
 
-
-        public List<int> ActualMove(List<int> testUnit, int checkeddirection)
+        public void ActualMove(List<double> testUnit)
         {
 
             ThrowYut throwYut = new ThrowYut();
@@ -35,7 +35,6 @@ namespace FinalProject.RunningTest
                 Console.WriteLine(testUnit[0] + " " + testUnit[1] + " " +testUnit[2]);
             }
 
-            return testUnit;
         }
 
     }
