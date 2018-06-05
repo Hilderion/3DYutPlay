@@ -20,6 +20,10 @@ namespace FinalProject.RunningTest
             List<double> testBot2 = testUnit.TestBot2();
             // 19-20에 새로 각 플레이어의 유닛을 추가하고
 
+            Unit u1 = new Unit(0, UnitTag.Knight);
+            Unit u2 = new Unit(1, UnitTag.Knight);
+
+
             TurnChecker actualGame = new TurnChecker();
 
 
@@ -29,6 +33,7 @@ namespace FinalProject.RunningTest
                 // 27에 플레이어1,플레이어2를 넣으면 구동한다.
                 actualGame.Player2Turn(testBot2);
 
+//                actualGame.Player1Turn(u1.UnitPosition);
             }
 
         }

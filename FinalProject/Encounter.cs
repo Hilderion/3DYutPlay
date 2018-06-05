@@ -44,7 +44,7 @@ namespace FinalProject
             {
                 foreach (Unit unit in SameLocation)
                 {
-                    unit.UnitPosition = new List<int> { 0, 0, 0 };
+                    unit.UnitPosition = new List<double> { 0, 0, 0 };
                     unit.LocationHistory.Clear();
                 }
             }

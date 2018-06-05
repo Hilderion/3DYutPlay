@@ -17,15 +17,15 @@ namespace FinalProject
 
         public bool isGoaled; //골인체크
 
-        public List<int> UnitPosition { get; set; }
+        public List<double> UnitPosition { get; set; }
 
-        public List<List<int>> LocationHistory;
+        public List<List<double>> LocationHistory;
 
         public Unit(int Player, UnitTag Tag)
         {
             _Player = Player;
             isGoaled = false;
-            UnitPosition.Add(0); UnitPosition.Add(0); UnitPosition.Add(0);
+            UnitPosition = new List<double>() { 0, 0, 0 };
             unitTag = Tag;
 
             _Attack = 0; _Defense = 0; _Speed = 0;

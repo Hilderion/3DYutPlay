@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Encount.cs" />
+    <Compile Include="Encounter.cs" />
     <Compile Include="GameDirector\GoalChecker.cs" />
     <Compile Include="GameDirector\PointTypeChecker.cs" />
     <Compile Include="GameDirector\SkipChecker.cs" />
