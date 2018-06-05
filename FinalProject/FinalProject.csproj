@@ -59,6 +59,7 @@
     <Compile Include="MapPoint\Start.cs" />
     <Compile Include="MapPoint\WellPoint.cs" />
     <Compile Include="MoveDirector\Move.cs" />
+    <Compile Include="MoveDirector\NeedToMove.cs" />
     <Compile Include="MoveDirector\SelectUnit.cs" />
     <Compile Include="MoveDirector\ThrowYut.cs" />
     <Compile Include="Program.cs" />

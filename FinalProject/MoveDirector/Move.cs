@@ -19,7 +19,7 @@ namespace FinalProject.MoveDirector
         public void PointTypeCheck(String _positionTag, int input)
         {
             SelectUnit selectUnit = new SelectUnit();
-            Boolean selectUnitResult = selectUnit.SelectUnitResult(input);
+            Boolean selectUnitResult = selectUnit.isSelectUnitResult(input);
 
             if (_positionTag == "cornerPoint" || _positionTag == "topPoint")
             {

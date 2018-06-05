@@ -5,7 +5,7 @@ namespace FinalProject.MoveDirector
 {
     class SelectUnit
     {
-        public Boolean SelectUnitResult(int selectUnit)
+        public Boolean isSelectUnitResult(int selectUnit)
         {
             List<int> unitset = new List<int>();
 

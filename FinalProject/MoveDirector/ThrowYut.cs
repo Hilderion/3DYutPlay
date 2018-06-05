@@ -10,6 +10,11 @@ namespace FinalProject.MoveDirector
             int result = r.Next(1, 6);
             return result;
         }
+
+        public Boolean isThrowYutResult(int t)
+        {
+            return true;
+        }
     }
 
 }
