@@ -22,11 +22,13 @@ namespace FinalProject.RunningTest
 
             TurnChecker actualGame = new TurnChecker();
 
-            for (int i = 0; i < 2; i++)
+
+            for (int i = 0; i < 5; i++)
             {
-                actualGame.Player1Turn(testBot1,testBot2);
+                actualGame.Player1Turn(testBot1);
                 // 27에 플레이어1,플레이어2를 넣으면 구동한다.
-        
+                actualGame.Player2Turn(testBot2);
+
             }
 
         }

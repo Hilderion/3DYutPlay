@@ -65,13 +65,15 @@ namespace FinalProject.RunningTest
                 destination = currentposition;
                 return destination;
             }
-            else
+            else if (direction ==9)
             {
                 currentposition[0] -= 3;
                 currentposition[2] += 3;
                 destination = currentposition;
                 return destination;
             }
+
+            return destination;
 
         }
     }

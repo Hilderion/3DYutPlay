@@ -15,7 +15,7 @@ namespace FinalProject.RunningTest
         HowToGo going = new HowToGo();
         MapPoint.CheckDirectionSelect checkDirectionSelect = new MapPoint.CheckDirectionSelect();
         int _throwYutResult;
-        private int checkeddirection;
+        int _checkeddirection=1;
 
         public void ActualMove(List<double> testUnit)
         {
@@ -23,14 +23,15 @@ namespace FinalProject.RunningTest
             ThrowYut throwYut = new ThrowYut();
             _throwYutResult = throwYut.ThrowYutResult();
 
+         
             Console.WriteLine("던져서" + " " + "나온값" + ":" + _throwYutResult);
 
 
             for (int i = 0; i < _throwYutResult; i++)
             {
-                checkeddirection = checkDirectionSelect.CheckDirection(testUnit, 1);
+                _checkeddirection = checkDirectionSelect.CheckDirection(testUnit, _checkeddirection);
 
-                testUnit = going.Directionsetting(testUnit, checkeddirection);
+                testUnit = going.Directionsetting(testUnit, _checkeddirection);
 
                 Console.WriteLine(testUnit[0] + " " + testUnit[1] + " " +testUnit[2]);
             }
