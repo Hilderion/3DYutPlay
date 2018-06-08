@@ -44,11 +44,13 @@ namespace FinalProject.GameDirector
             if (_player1GoalCount >= 4)
             {
                 // TODO : 플레이어 1 게임 승리 구현
+                Console.WriteLine("Player 1 win");
             }
 
             if (_player2GoalCount >= 4)
             {
                 // TODO : 플레이어 2 게임 승리 구현
+                Console.WriteLine("Player 2 win");
             }
         }
     }

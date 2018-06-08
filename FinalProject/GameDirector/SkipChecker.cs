@@ -12,8 +12,6 @@ namespace FinalProject.GameDirector
         PointTypeChecker pointTypeChecker = new PointTypeChecker();
         MapPoint.MapPoint mapPoint = new MapPoint.MapPoint();
 
-
-
         public void TurnCheck()
         {
             if (_turnSkip == true)

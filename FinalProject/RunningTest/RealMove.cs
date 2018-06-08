@@ -12,26 +12,22 @@ namespace FinalProject.RunningTest
 {
     class RealMove
     {
-        HowToGo going = new HowToGo();
+        MapPoint.Move move = new Move();
+
         MapPoint.CheckDirectionSelect checkDirectionSelect = new MapPoint.CheckDirectionSelect();
-        int _throwYutResult;
+        int _result;
         int _checkeddirection=1;
 
         public void ActualMove(List<double> testUnit)
         {
+            ThrowResult throwresult = new ThrowResult();
+            _result = throwresult.AfterThrow();
 
-            ThrowYut throwYut = new ThrowYut();
-            _throwYutResult = throwYut.ThrowYutResult();
-
-         
-            Console.WriteLine("던져서" + " " + "나온값" + ":" + _throwYutResult);
-
-
-            for (int i = 0; i < _throwYutResult; i++)
+            for (int i = 0; i < _result; i++)
             {
                 _checkeddirection = checkDirectionSelect.CheckDirection(testUnit, _checkeddirection);
 
-                testUnit = going.Directionsetting(testUnit, _checkeddirection);
+                testUnit = move.Directionsetting(testUnit, _checkeddirection);
 
                 Console.WriteLine(testUnit[0] + " " + testUnit[1] + " " +testUnit[2]);
             }

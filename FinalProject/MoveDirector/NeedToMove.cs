@@ -15,13 +15,10 @@ namespace FinalProject.MoveDirector
         Boolean selectUnitOrNot;
 
       
-
-
-
         public void NeedToMoveResult(Boolean throwYutOrNot, Boolean selectUnitOrNot)
         {
             throwYoutOrNot = throwYut.isThrowYutResult(1);
-            scanner input = new scanner();
+//            scanner input = new scanner();
             selectUnitOrNot = selectUnit.isSelectUnitResult(1);
             
 
