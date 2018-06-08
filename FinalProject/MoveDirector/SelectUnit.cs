@@ -5,17 +5,14 @@ namespace FinalProject.MoveDirector
 {
     class SelectUnit
     {
-        public Boolean isSelectUnitResult(int selectUnit)
+        public void isSelectUnitResult(Unit selectedUnit)
         {
-            List<int> unitset = new List<int>();
+            selectedUnit.isSelected = true;            
+        }
 
-            unitset.Add(1);
-            unitset.Add(2);
-            unitset.Add(3);
-            unitset.Add(4);
-
-            return true;
-            
+        public void unSelectUnit(Unit selectedUnit)
+        {
+            selectedUnit.isSelected = false;
         }
     }
 }

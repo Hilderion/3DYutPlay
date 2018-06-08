@@ -16,6 +16,8 @@ namespace FinalProject
         public int _Speed { get; protected set; } //이동속도
 
         public bool isGoaled; //골인체크
+        public bool isSelected = false;
+        public int direction;
 
         public List<double> UnitPosition { get; set; }
 
