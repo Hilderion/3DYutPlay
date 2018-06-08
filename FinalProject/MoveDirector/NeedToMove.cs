@@ -10,16 +10,19 @@ namespace FinalProject.MoveDirector
     {
         
               
-        public void NeedToMoveResult(Unit selectedUnit, ThrowYut throwCheck)
+        public bool NeedToMoveResult(Unit selectedUnit, ThrowYut throwCheck)
         {
+            
             
             if (selectedUnit.isSelected==true && throwCheck.isThrowCheck==true)
             {
-                Console.WriteLine("Run game");    
+                Console.WriteLine("Run game");
+                return true;
             }
             else
             {
                 Console.WriteLine("Please check selected unit or Yut throw");
+                return false;
             }
         }
 

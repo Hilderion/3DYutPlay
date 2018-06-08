@@ -23,22 +23,15 @@ namespace FinalProject.RunningTest
             Unit u1 = new Unit(0, UnitTag.Knight);
             Unit u2 = new Unit(1, UnitTag.Knight);
 
+            Player p1 = new Player();
+            Player p2 = new Player();
 
             TurnChecker actualGame = new TurnChecker();
+            p1.MakePlayer(1);
 
-//
-//            for (int i = 0; i < 5; i++)
-//            {
-//                actualGame.Player1Turn(testBot1);
-//                // 27에 플레이어1,플레이어2를 넣으면 구동한다.
-//                actualGame.Player2Turn(testBot2);
-//
-////                actualGame.Player1Turn(u1.UnitPosition);
-//            }
-
-            for (int i = 0; i < 10; i++)
+            for (int i = 0; i < 5; i++)
             {
-                actualGame.Player1Turn(u1.UnitPosition);
+                actualGame.Player1Turn(p1);
                 actualGame.Player2Turn(u2.UnitPosition);
             }
 

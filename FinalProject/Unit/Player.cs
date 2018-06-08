@@ -15,7 +15,7 @@ namespace FinalProject
         public Unit HeavySoldier;
         public Unit Guard;
         public Unit Scout;
-        public Player(int playerNumber)
+        public void MakePlayer(int playerNumber)
         {
             PlayerNumber = playerNumber;
 
@@ -24,10 +24,10 @@ namespace FinalProject
             Guard = new Unit(playerNumber, UnitTag.Guard);
             Scout = new Unit(playerNumber, UnitTag.Scout);
 
-            Owned.Add(Knight);
-            Owned.Add(HeavySoldier);
-            Owned.Add(Guard);
-            Owned.Add(Scout);
+            //Owned.Add(Knight);
+            //Owned.Add(HeavySoldier);
+            //Owned.Add(Guard);
+            //Owned.Add(Scout);
         }
 
     }
