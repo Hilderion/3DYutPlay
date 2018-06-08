@@ -1,0 +1,207 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="FinalProject.Encounter" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAQAAAAACAAAACAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Encounter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.Program" Collapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.Player" Collapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACIEAABAAABAAAAAAAAAAAAAACAAAIAAAAAA=</HashCode>
+      <FileName>Unit\Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.Unit" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQCCACQQAAAIABABBAACAIAAAAEAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Unit\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.UnitTeam" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Unit\UnitTeam.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.GameDirector.GetAndSetUnit" Collapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA=</HashCode>
+      <FileName>GameDirector\GetAndSetUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.GameDirector.GoalChecker" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQgSAAEAAAAAAAAAAAAKAIABAUgAAAAAAAA=</HashCode>
+      <FileName>GameDirector\GoalChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.GameDirector.PointTypeChecker" Collapsed="true">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAIAAIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GameDirector\PointTypeChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.GameDirector.SkipChecker" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAIAAAAAAAAAAAAAAAAACAAAAQAA=</HashCode>
+      <FileName>GameDirector\SkipChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.GameDirector.TurnChecker" Collapsed="true">
+    <Position X="20" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAEAAAAAAAbAIABAAAIAAAAEAAAAAEAAAAIIAAAAA=</HashCode>
+      <FileName>GameDirector\TurnChecker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.CheckDirectionSelect" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAIAAAggEAAAAAAAAAAAAARAAAAAAAAAA=</HashCode>
+      <FileName>MapPoint\CheckDirectionSelect.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.CornerPoint" Collapsed="true">
+    <Position X="1" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAAAAEAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MapPoint\CornerPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.DefaultPoint" Collapsed="true">
+    <Position X="3.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAAAAACCAIAAAAAAAAA=</HashCode>
+      <FileName>MapPoint\DefaultPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.MapPoint" Collapsed="true">
+    <Position X="6.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAIAgAAAAAIAAAAAAAIQACAAAAAIAAAAAABAAAAAA=</HashCode>
+      <FileName>MapPoint\MapPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.MountainPoint" Collapsed="true">
+    <Position X="7.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MapPoint\MountainPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.Move" Collapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MapPoint\Move.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.MoveUnity" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAACAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MapPoint\MoveUnity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.Program" Collapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MapPoint\Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.SelectDirection" Collapsed="true">
+    <Position X="20" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MapPoint\SelectDirection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.Start" Collapsed="true">
+    <Position X="5.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MapPoint\Start.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MapPoint.WellPoint" Collapsed="true">
+    <Position X="10" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MapPoint\WellPoint.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MoveDirector.NeedToMove" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MoveDirector\NeedToMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MoveDirector.SelectUnit" Collapsed="true">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAQAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MoveDirector\SelectUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MoveDirector.ThrowResult" Collapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAAAIABAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <FileName>MoveDirector\ThrowResult.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.MoveDirector.ThrowYut" Collapsed="true">
+    <Position X="18.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAQAAAAQAAEAAAAA=</HashCode>
+      <FileName>MoveDirector\ThrowYut.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.RunningTest.RealMove" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgAAAAAAAAACAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>RunningTest\RealMove.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.RunningTest.RunProgram" Collapsed="true">
+    <Position X="18.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>RunningTest\RunProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FinalProject.RunningTest.TestUnit" Collapsed="true">
+    <Position X="12.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>RunningTest\TestUnit.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="FinalProject.UnitTag" Collapsed="true">
+    <Position X="14.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAEAABAAAAAAAAAAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Unit\Unit.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Malgun Gothic" Size="9" />
+</ClassDiagram>
