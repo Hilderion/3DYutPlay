@@ -20,6 +20,7 @@ namespace FinalProject.GameDirector
         int playerTurnCounter1 = 1;
         int playerTurnCounter2 = 1;
         int result;
+        
 
         RealMove realMove = new RealMove();
         SelectUnit selectUnit = new SelectUnit();
@@ -46,7 +47,8 @@ namespace FinalProject.GameDirector
 
             Console.WriteLine("[윷값:"+result+"]");
 
-            realMove.ActualMove(player1.Knight.UnitPosition);
+            realMove.ActualMove(player1.Knight, result, player1.Knight.direction);
+            player1.Knight.direction = realMove._checkeddirection;
 
             Thread.Sleep(500);
 
@@ -58,34 +60,35 @@ namespace FinalProject.GameDirector
 
             playerTurnCounter1++;
 
-            //if (playerTurnCounter1>2 && player1.Knight.UnitPosition[0] == 1 && player1.Knight.UnitPosition[1] == 0 && player1.Knight.UnitPosition[2] == 0)
-            //{
-            //    Console.WriteLine("Player1 게임 끝");
-            //    Console.WriteLine("소요턴"+" : "+playerTurnCounter1);
-            //}
+           
         }
 
-        public void Player2Turn(List<double> player2)
+        public void Player2Turn(Player player2)
         {
             Console.WriteLine("----------------------");
             Console.WriteLine("player2의" + " " + playerTurnCounter2 + "번째 턴");
 
-            Thread.Sleep(500);
+            Start: selectUnit.isSelectUnitResult(player2.Knight);//Knight 선택
+            result = throwResult.AfterThrow();//윳 던지기
+            throwYut.Throwcheck();//윳 던진걸 체크
 
-            ThrowResult throwResult = new ThrowResult();
-            int result = throwResult.AfterThrow();
+            if (needToMove.NeedToMoveResult(player2.Knight, throwYut) != true)
+                goto Start;
 
             Console.WriteLine("[윷값:" + result + "]");
 
-            realMove.ActualMove(player2);
+            realMove.ActualMove(player2.Knight, result, player2.Knight.direction);
+            player2.Knight.direction = realMove._checkeddirection;
+
+            Thread.Sleep(500);
 
             Console.WriteLine("Player2" + " " + " Moved");
-          
-            Console.WriteLine("플레이어2의" + " " + "위치" + " : " + player2[0]);
+
+            Console.WriteLine("플레이어2의" + " " + "위치" + " : " + player2.Knight.UnitPosition[0] + " " + player2.Knight.UnitPosition[1] + " " + player2.Knight.UnitPosition[2]);
             _player2Moved = true;
             _player2TurnEnd = true;
 
-            playerTurnCounter2 ++;
+            playerTurnCounter2++;
 
             //if (playerTurnCounter2 > 2 && player2[0] == 1 && player2[1] == 0 &&player2[2] == 0)
             //{

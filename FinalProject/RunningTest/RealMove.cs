@@ -15,22 +15,23 @@ namespace FinalProject.RunningTest
         MapPoint.Move move = new Move();
 
         MapPoint.CheckDirectionSelect checkDirectionSelect = new MapPoint.CheckDirectionSelect();
-        int _result;
-        int _checkeddirection=1;
+        
+        public int _checkeddirection;
 
-        public void ActualMove(List<double> testUnit)
+        public void ActualMove(Unit movingUnit, int result, int unitdirection)
         {
-            ThrowResult throwresult = new ThrowResult();
-            _result = throwresult.AfterThrow();
-
-            for (int i = 0; i < _result; i++)
+            
+            for (int i = 0; i < result; i++)
             {
-                _checkeddirection = checkDirectionSelect.CheckDirection(testUnit, _checkeddirection);
+                _checkeddirection = checkDirectionSelect.CheckDirection(movingUnit.UnitPosition, unitdirection);
+                
+                movingUnit.UnitPosition = move.Directionsetting(movingUnit.UnitPosition, _checkeddirection);
+                unitdirection = _checkeddirection;
 
-                testUnit = move.Directionsetting(testUnit, _checkeddirection);
-
-                Console.WriteLine(testUnit[0] + " " + testUnit[1] + " " +testUnit[2]);
+                Console.WriteLine(movingUnit.UnitPosition[0] + " " + movingUnit.UnitPosition[1] + " " + movingUnit.UnitPosition[2]);
             }
+
+            
 
         }
 

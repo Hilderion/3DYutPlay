@@ -28,11 +28,12 @@ namespace FinalProject.RunningTest
 
             TurnChecker actualGame = new TurnChecker();
             p1.MakePlayer(1);
+            p2.MakePlayer(1);
 
             for (int i = 0; i < 5; i++)
             {
                 actualGame.Player1Turn(p1);
-                actualGame.Player2Turn(u2.UnitPosition);
+                actualGame.Player2Turn(p2);
             }
 
         }

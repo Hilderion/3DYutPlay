@@ -17,7 +17,7 @@ namespace FinalProject
 
         public bool isGoaled; //골인체크
         public bool isSelected = false;
-        public int direction;
+        public int direction=1;
 
         public List<double> UnitPosition { get; set; }
 
