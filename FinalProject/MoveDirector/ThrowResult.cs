@@ -9,7 +9,6 @@ namespace FinalProject.MoveDirector
     class ThrowResult
     {
         ThrowYut throwYut = new ThrowYut();
-        Random rand = new Random();
         int result;
 
         public int AfterThrow()

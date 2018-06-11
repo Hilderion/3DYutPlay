@@ -8,18 +8,32 @@ namespace FinalProject.GameDirector
 {
     class GetAndSetUnit
     {
-        public int GetSetUnit(int selectUnit)
+        public int SetUnit()
         {
             String GetUnit;
-            int SetUnit;
+            int SelectUnit;
 
             Console.WriteLine("================");
-            Console.WriteLine("1-4중유닛선택");
+            Console.WriteLine("1~4중유닛선택");
             Console.WriteLine("================");
+
             GetUnit = Console.ReadLine();
-            SetUnit = Convert.ToInt32(GetUnit);
-            return SetUnit;
+            SelectUnit = Convert.ToInt32(GetUnit);
+            Console.WriteLine(SelectUnit + "번 유닛 선택됨");
+            Console.WriteLine("-------------");
 
+            return SelectUnit;
+
+        }
+
+        public void isSelectUnitResult(Unit selectedUnit)
+        {
+            selectedUnit.isSelected = true;
+        }
+
+        public void unSelectUnit(Unit selectedUnit)
+        {
+            selectedUnit.isSelected = false;
         }
 
     }
