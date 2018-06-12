@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.Unit
+namespace FinalProject
 {
-    public class Position
+    class Board
     {
-        int x, y, z;
-
+        public void CreateBoard() { }
     }
 }

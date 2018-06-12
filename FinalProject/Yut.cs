@@ -4,15 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace FinalProject.Player
+namespace FinalProject
 {
-    class SkipChecker
+    class Yut
     {
-
-        public void TurnSkipChecker()
-        {
-
-
-        }
+        int _movepoint;
+        public int ThrowYut() { return _movepoint; }
     }
 }

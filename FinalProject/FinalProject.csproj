@@ -44,21 +44,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Map\Encounter.cs" />
-    <Compile Include="Map\Map.cs" />
-    <Compile Include="Map\Point.cs" />
-    <Compile Include="Player\GoalChecker.cs" />
-    <Compile Include="Player\MakePlayer.cs" />
-    <Compile Include="Player\NeedToMove.cs" />
-    <Compile Include="Player\PlayerInfo.cs" />
-    <Compile Include="Player\SkipChecker.cs" />
-    <Compile Include="Player\ThrowResult.cs" />
-    <Compile Include="Player\ThrowYut.cs" />
-    <Compile Include="Player\UnitSelector.cs" />
+    <Compile Include="Board.cs" />
+    <Compile Include="Player.cs" />
+    <Compile Include="Point.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Unit\Position.cs" />
-    <Compile Include="Unit\Unit.cs" />
+    <Compile Include="Unit.cs" />
+    <Compile Include="Yut.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
