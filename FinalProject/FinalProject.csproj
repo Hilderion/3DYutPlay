@@ -32,6 +32,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DevExpress.Data.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Xpo.v17.2, Version=17.2.7.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -42,40 +44,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Encounter.cs" />
-    <Compile Include="GameDirector\GetAndSetUnit.cs" />
-    <Compile Include="GameDirector\GoalChecker.cs" />
-    <Compile Include="GameDirector\PointTypeChecker.cs" />
-    <Compile Include="GameDirector\SkipChecker.cs" />
-    <Compile Include="GameDirector\RunGame.cs" />
-    <Compile Include="GameDirector\TurnCounter.cs" />
-    <Compile Include="MapPoint\CheckDirectionSelect.cs" />
-    <Compile Include="MapPoint\CornerPoint.cs" />
-    <Compile Include="MapPoint\DefaultPoint.cs" />
-    <Compile Include="MapPoint\MapPoint.cs" />
-    <Compile Include="MapPoint\MountainPoint.cs" />
-    <Compile Include="MapPoint\Move.cs" />
-    <Compile Include="MapPoint\MoveUnity.cs" />
-    <Compile Include="MapPoint\Program.cs" />
-    <Compile Include="MapPoint\SelectDirection.cs" />
-    <Compile Include="MapPoint\Start.cs" />
-    <Compile Include="MapPoint\WellPoint.cs" />
-    <Compile Include="MoveDirector\ThrowSelectcheck.cs" />
-    <Compile Include="MoveDirector\ThrowResult.cs" />
-    <Compile Include="MoveDirector\ThrowYut.cs" />
+    <Compile Include="Map\Encounter.cs" />
+    <Compile Include="Map\Map.cs" />
+    <Compile Include="Map\Point.cs" />
+    <Compile Include="Player\GoalChecker.cs" />
+    <Compile Include="Player\MakePlayer.cs" />
+    <Compile Include="Player\NeedToMove.cs" />
+    <Compile Include="Player\PlayerInfo.cs" />
+    <Compile Include="Player\SkipChecker.cs" />
+    <Compile Include="Player\ThrowResult.cs" />
+    <Compile Include="Player\ThrowYut.cs" />
+    <Compile Include="Player\UnitSelector.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RunningTest\RealMove.cs" />
-    <Compile Include="RunningTest\RunProgram.cs" />
-    <Compile Include="RunningTest\TestUnit.cs" />
-    <Compile Include="Unit\Player.cs" />
+    <Compile Include="Unit\Position.cs" />
     <Compile Include="Unit\Unit.cs" />
-    <Compile Include="Unit\UnitTeam.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="ClassDiagram1.cd" />
-    <None Include="ClassDiagram2.cd" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
