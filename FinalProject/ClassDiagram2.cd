@@ -66,7 +66,7 @@
   <Class Name="FinalProject.GameDirector.RunGame" Collapsed="true">
     <Position X="15" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAEAAAAAAATAIBBAEAIAAAAEAAAAAEAAAAIIAAAAA=</HashCode>
+      <HashCode>AAEAAAAAAAAASAIFBAEAAAAAAAAAAAAEAAAAIAAAAAA=</HashCode>
       <FileName>GameDirector\RunGame.cs</FileName>
     </TypeIdentifier>
   </Class>
@@ -147,24 +147,24 @@
       <FileName>MapPoint\WellPoint.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="FinalProject.MoveDirector.NeedToMove" Collapsed="true">
+  <Class Name="FinalProject.MoveDirector.ThrowSelectcheck" Collapsed="true">
     <Position X="17" Y="1.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>MoveDirector\NeedToMove.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MoveDirector\ThrowSelectcheck.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FinalProject.MoveDirector.ThrowResult" Collapsed="true">
     <Position X="18.5" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIABAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAICAAAAAAAAAAAAAAgAAAAAAAAAAAA=</HashCode>
       <FileName>MoveDirector\ThrowResult.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="FinalProject.MoveDirector.ThrowYut" Collapsed="true">
     <Position X="17" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAIAAAAAAAAAAAAAAQAAAAQAAEAAAAA=</HashCode>
+      <HashCode>QAAAAAAAAAAAAAIAAAAAAAAAAAAAAQAAAAQAAAAAAAA=</HashCode>
       <FileName>MoveDirector\ThrowYut.cs</FileName>
     </TypeIdentifier>
   </Class>

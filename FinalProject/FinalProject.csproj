@@ -48,6 +48,7 @@
     <Compile Include="GameDirector\PointTypeChecker.cs" />
     <Compile Include="GameDirector\SkipChecker.cs" />
     <Compile Include="GameDirector\RunGame.cs" />
+    <Compile Include="GameDirector\TurnCounter.cs" />
     <Compile Include="MapPoint\CheckDirectionSelect.cs" />
     <Compile Include="MapPoint\CornerPoint.cs" />
     <Compile Include="MapPoint\DefaultPoint.cs" />
@@ -59,7 +60,7 @@
     <Compile Include="MapPoint\SelectDirection.cs" />
     <Compile Include="MapPoint\Start.cs" />
     <Compile Include="MapPoint\WellPoint.cs" />
-    <Compile Include="MoveDirector\NeedToMove.cs" />
+    <Compile Include="MoveDirector\ThrowSelectcheck.cs" />
     <Compile Include="MoveDirector\ThrowResult.cs" />
     <Compile Include="MoveDirector\ThrowYut.cs" />
     <Compile Include="Program.cs" />

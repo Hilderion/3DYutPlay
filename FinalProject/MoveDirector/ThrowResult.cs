@@ -9,12 +9,12 @@ namespace FinalProject.MoveDirector
     class ThrowResult
     {
         ThrowYut throwYut = new ThrowYut();
-        int result;
+        int _result;
 
         public int AfterThrow()
         {
-            result = throwYut.ThrowYutResult();
-            return result;
+            _result = throwYut.ThrowYutResult();
+            return _result;
         }
     }
 }

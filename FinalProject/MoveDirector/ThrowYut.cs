@@ -11,7 +11,7 @@ namespace FinalProject.MoveDirector
             isThrowCheck = true;
         }
 
-        public void resetThrowCheck()
+        public void ResetThrowCheck()
         {
             isThrowCheck = false;
         }

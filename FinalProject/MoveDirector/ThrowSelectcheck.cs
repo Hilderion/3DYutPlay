@@ -6,14 +6,13 @@ using System.Threading.Tasks;
 
 namespace FinalProject.MoveDirector
 {
-    class NeedToMove
+    class ThrowSelectcheck
     {
         
               
-        public bool NeedToMoveResult(Unit selectedUnit, ThrowYut throwCheck)
+        public bool ResultCheck(Unit selectedUnit, ThrowYut throwCheck)
         {
-            
-            
+
             if (selectedUnit.isSelected==true && throwCheck.isThrowCheck==true)
             {
                 Console.WriteLine("Run game");
