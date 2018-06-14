@@ -17,17 +17,17 @@ namespace FinalProject
 
     class FieldPoint : Point
     {
-        int 스탯변화량;
+        int 스탯변화케이스;
         
         
         public override void 실행하기()
         {
-            //유닛스탯증감치를 설정한다
+            //변화할 케이스를 랜덤으로 정한다 (1 : 공격력증가, 2:공격력감소... )
         }
 
-        private int 유닛스탯증감치전송하기()
+        private int 변화할케이스를전송하기()
         {
-            //'실행하기'에서 변경 된 스탯을 유닛에게 전송한다
+            //'실행하기'에서 결정된 케이스를 유닛에게 전송한다
 
             return 0;
         }
