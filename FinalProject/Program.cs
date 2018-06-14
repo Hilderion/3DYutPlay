@@ -16,15 +16,15 @@ namespace FinalProject
             Player player2 = new Player();
             Yut yut = new Yut();
 
-            int _selectedunit;
+            int _selectedUnit;
 
             board.CreateBoard();
             player1.CreatePlayer(1);
             player2.CreatePlayer(2);
 
-            _selectedunit = player1.SelectUnit();
+            _selectedUnit = player1.SelectUnit();
 
-            player1.UnitInfo[_selectedunit].Move(yut.ThrowYut());
+            player1.UnitInfo[_selectedUnit].Move(yut.ThrowYut());
             board.Excute();
         }
     }
