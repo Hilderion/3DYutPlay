@@ -10,18 +10,18 @@ namespace FinalProject
     {
         internal int 공격력 { get; private set; }
         internal int 방어력 { get; private set; }
-        internal int 추가이동력 { get; private set; }
+        internal int 이동력 { get; private set; }
         private bool _도착여부 = false;
         public int 현재위치;
         List<int> _지나간포인트기록;
         List<Unit> _합쳐진유닛들;
 
-        public Unit(int attack, int defense, int exMove)
+        public Unit(int attack, int defense, int speed)
         //공격력, 방어력, 추가이동력 초기값 요구
         {
             공격력 = attack;
             방어력 = defense;
-            추가이동력 = exMove;
+            이동력 = speed;
 
             _합쳐진유닛들 = new List<Unit> { this };
         }

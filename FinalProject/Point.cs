@@ -8,7 +8,7 @@ namespace FinalProject
 {
     abstract class Point
     {
-        List<int> _연결된포인트 = new List<int>();
+        List<int> _연결된포인트고유번호 = new List<int>();
         internal int 포인트고유번호 { get; private set; }
         bool _칸채워짐여부;
 
@@ -17,8 +17,8 @@ namespace FinalProject
 
     class FieldPoint : Point
     {
-        int 공격력변화량;
-        int 방어력변화량;
+        int 스탯변화량;
+        
         
         public override void 실행하기()
         {
