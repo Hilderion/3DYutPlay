@@ -8,7 +8,7 @@ namespace FinalProject
 {
     class Player
     {
-        public List<Unit> unitInfo = new List<Unit>();
+        public List<Unit> UnitInfo = new List<Unit>();
         int _turnCount;
         int _playerNumber;
         int _goalCount;

@@ -9,12 +9,14 @@ namespace FinalProject
 {
     class Program
     {
+        
+
         Board board = new Board();
         Player player1 = new Player();
         Player player2 = new Player();
         Yut yut = new Yut();
 
-        int selectedunit;
+        int _selectedunit;
 
 
         public void Main()
@@ -23,10 +25,12 @@ namespace FinalProject
             player1.CreatePlayer(1);
             player2.CreatePlayer(2);
 
-            selectedunit = player1.SelectUnit();
+            _selectedunit = player1.SelectUnit();
 
-            player1.unitInfo[selectedunit].Move(yut.ThrowYut());
+            player1.UnitInfo[_selectedunit].Move(yut.ThrowYut());
             board.Excute();
+
+
 
         }
     }

@@ -10,7 +10,7 @@ namespace FinalProject
     {
         
         List<Point> linkedPoints = new List<Point>();
-        private int pointnumber { get; set; }
+        private int PointNumber { get; set; }
         bool _isFilled;
 
         public abstract void Excute();
@@ -23,7 +23,7 @@ namespace FinalProject
 
     class FieldPoint : Point
     {
-        int changepoint;
+        int _changepoint;
         public override void Excute()
         {
             //changepoint에 값을 부여하고 TransferChangePoint실행
@@ -31,7 +31,7 @@ namespace FinalProject
 
         public int TransferChangePoint()
         {
-            return changepoint;
+            return _changepoint;
         }
     }
 
