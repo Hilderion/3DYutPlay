@@ -15,7 +15,7 @@ namespace FinalProject
 
         public abstract void Excute();
 
-        public void GetUnitInfo(Unit unit) { }
+        
         
 
 
