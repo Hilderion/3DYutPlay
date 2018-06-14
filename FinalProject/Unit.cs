@@ -8,29 +8,29 @@ namespace FinalProject
 {
     class Unit
     {
-        private int Attackpoint { get; set; }
-        private int Defencepoint { get; set; }
-        private int Extramovepoint { get; set; }
+        private int AttackPoint { get; set; }
+        private int DefencePoint { get; set; }
+        private int ExtraMovePoint { get; set; }
         private bool isGoaled = false;
         public int Point;
         private List<int> PointHistory;
-        public List<Unit> units;
+        public List<Unit> Units;
 
         public Unit(int attack, int Defence, int ExMove)//공격, 방어, 이동력 초기값 요구
         {
-            Attackpoint = attack;
-            Defencepoint = Defence;
-            Extramovepoint = ExMove;
+            AttackPoint = attack;
+            DefencePoint = Defence;
+            ExtraMovePoint = ExMove;
 
-            units = new List<Unit>();
-            units.Add(this);
+            Units = new List<Unit>();
+            Units.Add(this);
         }
 
         public void Move(int yut)//윷값을 받아서 실행
         {
             if (yut == 6)//백도를 우선 체크
             {
-                foreach (Unit move in units)//개별 유닛마다 실행
+                foreach (Unit move in Units)//개별 유닛마다 실행
                 {//PointHistory에 저장된 직전 칸으로 이동 및 끝 1개 삭제
                     move.Point = move.PointHistory.Last();
                     move.PointHistory.RemoveAt(move.PointHistory.Count);
@@ -38,8 +38,8 @@ namespace FinalProject
             }
             else
             {
-                yut += Extramovepoint;//윷값에 이동력을 가산
-                foreach (Unit move in units)//개별 유닛마다 실행
+                yut += ExtraMovePoint;//윷값에 이동력을 가산
+                foreach (Unit move in Units)//개별 유닛마다 실행
                 {
                     for (int i = yut; i > 0; i--)//윷 수와 같은 임의의 i바퀴
                     {
@@ -50,9 +50,9 @@ namespace FinalProject
         }
         public void Battle(Unit defence) //이 메소드의 주체가 공격측, 매개변수 defense가 방어측
         {//공격측의 최대공격력이 방어측의 최대방어력보다 낮은 경우
-            if (units.Max(x => x.Attackpoint) > defence.units.Max(x => x.Defencepoint))
+            if (Units.Max(x => x.AttackPoint) > defence.Units.Max(x => x.DefencePoint))
             {
-                foreach (Unit dead in defence.units)//개별 사망 유닛마다 실행
+                foreach (Unit dead in defence.Units)//개별 사망 유닛마다 실행
                 {
                     //Point를 시작점으로 강제수정 및 PointHistory에 clear로 초기화
                 }
@@ -65,32 +65,32 @@ namespace FinalProject
 
         public void UnitLink(Unit unit)//업힐 유닛(들)을 받아서 실행
         {
-            units.AddRange(unit.units);//업히는 유닛의 리스트를 현 유닛에 추가
-            unit.units.Clear();
-            unit.units.Add(unit);//업히는 쪽은 리스트를 clear하고 다시 자신을 추가해 초기화
+            Units.AddRange(unit.Units);//업히는 유닛의 리스트를 현 유닛에 추가
+            unit.Units.Clear();
+            unit.Units.Add(unit);//업히는 쪽은 리스트를 clear하고 다시 자신을 추가해 초기화
         }
 
         public void ChangeAttackPoint(int point)
         {
-            foreach (Unit unit in units)
+            foreach (Unit unit in Units)
             {
-                Attackpoint = point;
+                AttackPoint = point;
             }
         }
 
         public void ChangeDefencePoint(int point)
         {
-            foreach (Unit unit in units)
+            foreach (Unit unit in Units)
             {
-                Defencepoint = point;
+                DefencePoint = point;
             }
         }
 
         public void ChangeMovePoint(int point)
         {
-            foreach (Unit unit in units)
+            foreach (Unit unit in Units)
             {
-                Extramovepoint = point;
+                ExtraMovePoint = point;
             }
         }
 
