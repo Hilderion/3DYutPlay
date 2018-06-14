@@ -12,7 +12,7 @@ namespace FinalProject
         private int Defencepoint { get; set; }
         private int Extramovepoint { get; set; }
 
-        public void Move() { }
+        public void Move(int movepoint) { }
         public void Battle(Unit unit) { }
         public void UnitLink(Unit unit) { }
         public void ChangeAttackPoint(int point) { }

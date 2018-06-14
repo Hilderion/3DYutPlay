@@ -8,6 +8,13 @@ namespace FinalProject
 {
     class Board
     {
+        MountainPoint mountainPoint = new MountainPoint();
+        FieldPoint fieldPoint = new FieldPoint();
+        WellPoint wellPoint = new WellPoint();
+        CornerPoint cornerPoint = new CornerPoint();
+
         public void CreateBoard() { }
+
+        public void Excute() { }
     }
 }
