@@ -11,7 +11,7 @@ namespace FinalProject
         internal int 공격력 { get; private set; }
         internal int 방어력 { get; private set; }
         internal int 이동력 { get; private set; }
-        private bool _도착여부 = false;
+        public bool _도착여부 = false;
         public int 현재위치;
         List<int> _지나간포인트기록;
         List<Unit> _합쳐진유닛들;
