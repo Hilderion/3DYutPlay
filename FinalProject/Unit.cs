@@ -48,11 +48,11 @@ namespace FinalProject
                 }
             }
         }
-        public void Battle(Unit defence) //이 메소드의 주체가 공격측, 매개변수 defense가 방어측
+        public void Battle(Unit defense) //이 메소드의 주체가 공격측, 매개변수 defense가 방어측
         {//공격측의 최대공격력이 방어측의 최대방어력보다 낮은 경우
-            if (Units.Max(x => x.AttackPoint) > defence.Units.Max(x => x.DefensePoint))
+            if (Units.Max(x => x.AttackPoint) > defense.Units.Max(x => x.DefensePoint))
             {
-                foreach (Unit dead in defence.Units)//개별 사망 유닛마다 실행
+                foreach (Unit dead in defense.Units)//개별 사망 유닛마다 실행
                 {
                     //Point를 시작점으로 강제수정 및 PointHistory에 clear로 초기화
                 }
