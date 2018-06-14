@@ -11,6 +11,8 @@ namespace FinalProject
         private int Attackpoint { get; set; }
         private int Defencepoint { get; set; }
         private int Extramovepoint { get; set; }
+        private int CurrentBoardpoint { get; set; }
+        private int FormerBoardpoint { get; set; }
 
         public void Move(int movepoint) { }
         public void Battle(Unit unit) { }

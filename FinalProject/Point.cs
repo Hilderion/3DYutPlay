@@ -10,9 +10,13 @@ namespace FinalProject
     {
         
         List<Point> linkedPoints = new List<Point>();
+        private int pointnumber { get; set; }
         bool _isFilled;
 
         public abstract void Excute();
+
+        public void GetUnitInfo(Unit unit) { }
+        
 
 
     }
@@ -35,7 +39,7 @@ namespace FinalProject
     {
         public override void Excute()
         {
-            //산적과 전투, 유닛의 공격력이 1보다 낮으면 뒤로 한칸 물러남
+            //산적, 유닛의 공격력이 1보다 낮으면 뒤로 한칸 물러남
         }
     }
 

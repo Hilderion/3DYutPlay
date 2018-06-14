@@ -13,6 +13,8 @@ namespace FinalProject
         WellPoint wellPoint = new WellPoint();
         CornerPoint cornerPoint = new CornerPoint();
 
+        List<Point> boardpoints = new List<Point>();
+
         public void CreateBoard() { }
 
         public void Excute() { }
