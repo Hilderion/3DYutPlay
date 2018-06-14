@@ -24,7 +24,7 @@ namespace FinalProject
 
             _selectedUnit = player1.유닛선택하기();
 
-            player1.유닛정보[_selectedUnit].Move(yut.ThrowYut());
+            player1.유닛정보[_selectedUnit].이동하기(yut.윷던지기());
             board.실행하기();
 
 

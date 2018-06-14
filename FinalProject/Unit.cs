@@ -8,95 +8,52 @@ namespace FinalProject
 {
     class Unit
     {
-        public int AttackPoint { get; set; }
-        public int DefensePoint { get; set; }
-        public int ExtraMovePoint { get; set; }
-        private bool isGoaled = false;
-        public int Point;
-        private List<int> PointHistory;
-        public List<Unit> Units;
+        internal int 공격력 { get; private set; }
+        internal int 방어력 { get; private set; }
+        internal int 추가이동력 { get; private set; }
+        private bool _도착여부 = false;
+        public int 현재위치;
+        List<int> _지나간포인트기록;
+        List<Unit> _합쳐진유닛들;
 
-        public Unit(int attack, int defense, int exMove)//공격, 방어, 이동력 초기값 요구
+        public Unit(int attack, int defense, int exMove)
+        //공격력, 방어력, 추가이동력 초기값 요구
         {
-            AttackPoint = attack;
-            DefensePoint = defense;
-            ExtraMovePoint = exMove;
+            공격력 = attack;
+            방어력 = defense;
+            추가이동력 = exMove;
 
-            Units = new List<Unit>();
-            Units.Add(this);
+            _합쳐진유닛들 = new List<Unit> { this };
         }
 
-        public void Move(int movePoint)//윷값을 받아서 실행
+        public void 이동하기(int 윷값,int 다음진행할포인트고유번호)
+
         {
-            if (movePoint == 6)//백도를 우선 체크
-            {
-                foreach (Unit move in Units)//개별 유닛마다 실행
-                {//PointHistory에 저장된 직전 칸으로 이동 및 끝 1개 삭제
-                    move.Point = move.PointHistory.Last();
-                    move.PointHistory.RemoveAt(move.PointHistory.Count);
-                }
-            }
-            else
-            {
-                movePoint += ExtraMovePoint;//윷값에 이동력을 가산
-                foreach (Unit move in Units)//개별 유닛마다 실행
-                {
-                    for (int i = movePoint; i > 0; i--)//윷 수와 같은 임의의 i바퀴
-                    {
-                        //현위치를 PointHistory에 추가하고 다음 1칸으로 이동
-                    }
-                }
-            }
-        }
-        public void Battle(Unit defense) //이 메소드의 주체가 공격측, 매개변수 defense가 방어측
-        {//공격측의 최대공격력이 방어측의 최대방어력보다 낮은 경우
-            if (Units.Max(x => x.AttackPoint) > defense.Units.Max(x => x.DefensePoint))
-            {
-                foreach (Unit dead in defense.Units)//개별 사망 유닛마다 실행
-                {
-                    //Point를 시작점으로 강제수정 및 PointHistory에 clear로 초기화
-                }
-            }
-            else//그 외
-            {
-                Move(6);//백도 취급해 실행
-            }
+            //윷 던지기에서 '윷값'을 받아서 그 숫자만큼 이동한다
+            //'다음진행할포인트고유번호'로 이동한다 (1~25중 )
         }
 
-        public void UnitLink(Unit unit)//업힐 유닛(들)을 받아서 실행
+        public void 전투하기(Unit 방어유닛)
         {
-            Units.AddRange(unit.Units);//업히는 유닛의 리스트를 현 유닛에 추가
-            unit.Units.Clear();
-            unit.Units.Add(unit);//업히는 쪽은 리스트를 clear하고 다시 자신을 추가해 초기화
+            //방어유닛을 대상으로 전투한다
+
+        }
+           
+
+        public void 유닛업기(Unit 업힐유닛)
+        {
+            // 지금 유닛에 '업힐유닛'을 받아서 업는다
         }
 
-        public void ChangeAttackPoint(int point)
-        {
-            foreach (Unit unit in Units)
-            {
-                AttackPoint = point;
-            }
-        }
 
-        public void ChangeDefencePoint(int point)
+        public void 능력치변경(int 능력치변화량)
         {
-            foreach (Unit unit in Units)
-            {
-                DefensePoint = point;
-            }
+            
         }
-
-        public void ChangeMovePoint(int point)
+        
+        public void 유닛도착처리하기()
         {
-            foreach (Unit unit in Units)
-            {
-                ExtraMovePoint = point;
-            }
-        }
-
-        public void GoalUnit()
-        {
-            isGoaled = true;
+            _도착여부 = true;
         }
     }
 }
