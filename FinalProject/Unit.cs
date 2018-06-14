@@ -8,9 +8,9 @@ namespace FinalProject
 {
     class Unit
     {
-        private int AttackPoint { get; set; }
-        private int DefensePoint { get; set; }
-        private int ExtraMovePoint { get; set; }
+        public int AttackPoint { get; set; }
+        public int DefensePoint { get; set; }
+        public int ExtraMovePoint { get; set; }
         private bool isGoaled = false;
         public int Point;
         private List<int> PointHistory;

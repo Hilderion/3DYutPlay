@@ -18,14 +18,21 @@ namespace FinalProject
 
             int _selectedUnit;
 
-            board.CreateBoard();
-            player1.CreatePlayer(1);
-            player2.CreatePlayer(2);
+            board.게임판생성하기();
+            player1.플레이어생성하기(1);
+            player2.플레이어생성하기(2);
 
-            _selectedUnit = player1.SelectUnit();
+            _selectedUnit = player1.유닛선택하기();
 
-            player1.UnitInfo[_selectedUnit].Move(yut.ThrowYut());
-            board.Excute();
+            player1.유닛정보[_selectedUnit].Move(yut.ThrowYut());
+            board.실행하기();
+
+
         }
+
+       
+
+     
+
     }
 }

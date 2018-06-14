@@ -9,6 +9,10 @@ namespace FinalProject
     class Yut
     {
         int _movePoint;
-        public int ThrowYut() { return _movePoint; }
+
+        public int ThrowYut()
+        {
+            return _movePoint;
+        }
     }
 }

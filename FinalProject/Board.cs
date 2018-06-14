@@ -8,15 +8,22 @@ namespace FinalProject
 {
     class Board
     {
-        MountainPoint mountainPoint = new MountainPoint();
-        FieldPoint fieldPoint = new FieldPoint();
-        WellPoint wellPoint = new WellPoint();
-        CornerPoint cornerPoint = new CornerPoint();
+        List<Point> _boardPoints = new List<Point>();
 
-        List<Point> boardPoints = new List<Point>();
+        public void 게임판생성하기()
+        {
+           
+        }
 
-        public void CreateBoard() { }
+        public Board()
+        {
+            
 
-        public void Excute() { }
+        }
+
+        public void 실행하기()
+        {
+
+        }
     }
 }
