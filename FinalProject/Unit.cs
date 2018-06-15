@@ -27,6 +27,11 @@ namespace FinalProject
             _합쳐진유닛들 = new List<Unit> { this };
         }
 
+       public Unit()
+        {
+
+        }
+
         public void 이동하기(int 윷값, int 다음진행할포인트고유번호)
 
         {
@@ -44,6 +49,11 @@ namespace FinalProject
         public void 유닛업기(Unit 업힐유닛)
         {
             // 지금 유닛에 '업힐유닛'을 받아서 업는다
+        }
+
+        public void 유닛업기()
+        {
+
         }
 
 
