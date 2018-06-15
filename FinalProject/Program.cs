@@ -22,8 +22,6 @@ namespace FinalProject
            
             _선택된유닛 = player1.유닛선택하기();
 
-            
-
         }
         
     }
