@@ -9,12 +9,12 @@ namespace FinalProject
     class Player
     {
         List<Unit> _소유한유닛정보 = new List<Unit>();
-        int _진행턴;
-        int _플레이어넘버;
-        int _점수;
-        bool _턴스킵여부;
+        internal int _진행턴 { get; private set; }
+        internal int _플레이어넘버 { get; private set; }
+        internal int _점수 { get; private set; }
+        internal bool _턴스킵여부 { get; private set; }
 
-        public void 플레이어생성하기(int 플레이어넘버)
+        public Player(int 플레이어넘버)
         {
             // 플레이어 넘버 1~2 중 하나 지정
             // 유닛 1~4 만들기

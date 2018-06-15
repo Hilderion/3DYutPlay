@@ -8,10 +8,10 @@ namespace FinalProject
 {
     abstract class Point
     {
-        List<int> _연결된포인트고유번호 = new List<int>();
-        internal int 포인트고유번호 { get; private set; }
-        bool _칸채워짐여부;
-
+        List<Point> _연결된포인트고유번호 = new List<Point>();
+        internal int _포인트고유번호 { get; private set; }
+        internal bool _칸채워짐여부 { get; private set; }
+        
         public abstract void 실행하기();
     }
 

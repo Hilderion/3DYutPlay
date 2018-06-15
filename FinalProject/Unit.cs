@@ -8,20 +8,20 @@ namespace FinalProject
 {
     class Unit
     {
-        internal int 공격력 { get; private set; }
-        internal int 방어력 { get; private set; }
-        internal int 이동력 { get; private set; }
-        public bool _도착여부 = false;
-        public int 현재위치;
-        List<int> _지나간포인트기록;
+        internal int _공격력 { get; private set; }
+        internal int _방어력 { get; private set; }
+        internal int _이동력 { get; private set; }
+        internal bool _도착여부 {get ; private set; }
+        internal int _현재위치 { get; private set; } 
+        List<Point> _지나간포인트기록;
         List<Unit> _합쳐진유닛들;
 
         public Unit(int attack, int defense, int speed)
         //공격력, 방어력, 추가이동력 초기값 요구
         {
-            공격력 = attack;
-            방어력 = defense;
-            이동력 = speed;
+            _공격력 = attack;
+            _방어력 = defense;
+            _이동력 = speed;
 
             _합쳐진유닛들 = new List<Unit> { this };
         }
@@ -46,7 +46,7 @@ namespace FinalProject
         }
 
 
-        public void 능력치변경(int 능력치변화량)
+        public void 능력치변경(int 능력치변화케이스)
         {
             
         }
