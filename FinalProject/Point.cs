@@ -10,20 +10,32 @@ namespace FinalProject
     {
         List<Point> _연결된포인트고유번호 = new List<Point>();
         internal int 포인트고유번호 { get; private set; }
+
         internal bool 칸채워짐여부 { get; private set; }
         //칸채워짐 여부에 따른 행동 설계 할것
 
         public abstract void 실행하기();
+        public abstract void 겹침처리하기();
+
     }
 
     class FieldPoint : Point
     {
         int _능력치변화케이스;
 
+
         public override void 실행하기()
         {
             //변화할 케이스를 랜덤으로 정한다 (1 : 공격력증가, 2:공격력감소... )
             _능력치변화케이스 = 1;
+        }
+
+        public override void 겹침처리하기()
+        {
+            if (칸채워짐여부 == true)
+            {
+                //아군일 경우 유닛업기, 적군일 경우 전투하기
+            }
         }
 
         private int 변화할케이스를전송하기()
@@ -40,6 +52,14 @@ namespace FinalProject
         {
             //산적, 유닛의 공격력이 1(산적의 공격력)보다 낮으면 뒤로 한칸 이동함(연결포인트의 이전 포인트로 이동한다)
         }
+
+        public override void 겹침처리하기()
+        {
+            if (칸채워짐여부 == true)
+            {
+                //아군일 경우 유닛업기, 적군일 경우 전투하기
+            }
+        }
     }
 
     class WellPoint : Point
@@ -49,6 +69,14 @@ namespace FinalProject
             //플레이어의 턴을 한턴 스킵
             //플레이어의 '턴스킵여부'를 true로 바꾼다
         }
+
+        public override void 겹침처리하기()
+        {
+            if (칸채워짐여부 == true)
+            {
+                //아군일 경우 유닛업기, 적군일 경우 전투하기
+            }
+        }
     }
 
     class CornerPoint : Point
@@ -56,6 +84,14 @@ namespace FinalProject
         public override void 실행하기()
         {
             //연결된 포인트에서 진행방향을 하나 선택
+        }
+
+        public override void 겹침처리하기()
+        {
+            if (칸채워짐여부 == true)
+            {
+                //아군일 경우 유닛업기, 적군일 경우 전투하기
+            }
         }
 
         public int 선택한포인트반환()

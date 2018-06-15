@@ -47,7 +47,7 @@ namespace FinalProject
         }
 
 
-        public void 능력치변경(int 능력치변화케이스)
+        public void 능력치변경하기(int 능력치변화케이스)
         {
             //능력치변화케이스에 들어온 값에 따라 case 구문으로 받는다.
             // 1: 공격력증가, 2: 공격력감소, 3:방어력증가, 4:방어력감소
