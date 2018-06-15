@@ -3,14 +3,44 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using FinalProject.Points;
 
 namespace FinalProject
 {
-    class Board
+    public class Board
     {
-        public void 게임판생성하기()
+        #region singleton
+        private static Board _instance;
+        
+        public static Board Instance
         {
-         // 다수의 Point를 생성한다 (산악n개, 일반필드n개 ...)  
+            get
+            {
+                if (_instance == null)
+                    _instance = new Board();
+                
+                return _instance;
+            }
+        }
+        
+        private Board()
+        {
+        }
+        #endregion
+
+        public void Initialize()
+        {
+        }
+
+        public void InitializeForTest()
+        {
+        }
+        
+        private Dictionary<int, Point> _points = new Dictionary<int, Point>();
+
+        public Point this[int pointId]
+        {
+            get { return _points[pointId]; }
         }
 
     }   
