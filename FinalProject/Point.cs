@@ -9,28 +9,29 @@ namespace FinalProject
     abstract class Point
     {
         List<Point> _연결된포인트고유번호 = new List<Point>();
-        internal int _포인트고유번호 { get; private set; }
-        internal bool _칸채워짐여부 { get; private set; }
-        
+        internal int 포인트고유번호 { get; private set; }
+        internal bool 칸채워짐여부 { get; private set; }
+        //칸채워짐 여부에 따른 행동 설계 할것
+
         public abstract void 실행하기();
     }
 
     class FieldPoint : Point
     {
-        int 스탯변화케이스;
-        
-        
+        int _능력치변화케이스;
+
         public override void 실행하기()
         {
             //변화할 케이스를 랜덤으로 정한다 (1 : 공격력증가, 2:공격력감소... )
+            _능력치변화케이스 = 1;
         }
 
         private int 변화할케이스를전송하기()
         {
             //'실행하기'에서 결정된 케이스를 유닛에게 전송한다
-
-            return 0;
+            return _능력치변화케이스;
         }
+
     }
 
     class MountainPoint : Point

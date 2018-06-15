@@ -16,11 +16,11 @@ namespace FinalProject
             Player player2 = new Player(2);
             Yut yut = new Yut();
 
-            int _selectedUnit;
+            int _선택된유닛;
 
             board.게임판생성하기();
            
-            _selectedUnit = player1.유닛선택하기();
+            _선택된유닛 = player1.유닛선택하기();
 
             
 
