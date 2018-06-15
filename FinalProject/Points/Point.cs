@@ -2,15 +2,34 @@
 {
     public abstract class Point
     {
-        protected Point(int id)
+        public Point(int id, params int[] nextIds)
         {
             Id = id;
+            NextIds = nextIds;
+        }
+        
+        public int[] NextIds { get; private set; }
+
+        public Point Next
+        {
+            get
+            {
+                if (NextIds.Length == 1)
+                    return Board.Instance[NextIds[0]];
+                else
+                    return null;
+            }
         }
 
         public int Id { get; private set; }
 
         public abstract PointType Type { get; }
 
-        public abstract void 실행하기();
+        public abstract void Execute();
+
+        public override string ToString()
+        {
+            return Id.ToString();
+        }
     }
 }

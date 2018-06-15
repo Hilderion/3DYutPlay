@@ -2,7 +2,7 @@
 {
     public enum PointType
     {
-        Goal,
+        Starting,
         Mountain,
         Corner,
         Field

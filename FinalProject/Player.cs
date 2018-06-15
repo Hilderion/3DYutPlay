@@ -1,25 +1,32 @@
-﻿using System;
+﻿#region
+using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+#endregion
 
 namespace FinalProject
 {
     public class Player
     {
-        public int No { get; private set; }
+        public int Id { get; }
 
-        public Player(int no)
+        public Player(int id)
         {
-            No = no;
+            Id = id;
             Horses = new List<Horse>();
-            
+
+            HorseType[] horseTypes = (HorseType[]) Enum.GetValues(typeof(HorseType));
+            foreach (var horseType in horseTypes)
+                Horses.Add(Horse.Create(this, horseType));
         }
 
-        public List<Horse> Horses { get; private set; }
+        public List<Horse> Horses { get; }
 
         public bool IsWon => Horses.All(x => x.Finished);
 
+        public void MoveHorse(HorseType horseType, int dice)
+        {
+//            Horses[(int) horseType].
+        }
     }
 }

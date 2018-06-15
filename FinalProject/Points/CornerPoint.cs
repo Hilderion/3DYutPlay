@@ -2,9 +2,13 @@
 {
     class CornerPoint : Point
     {
+        public CornerPoint(int id, params int[] nextIds) : base(id, nextIds)
+        {
+        }
+
         public override PointType Type => PointType.Corner;
 
-        public override void 실행하기()
+        public override void Execute()
         {
             //연결된 포인트에서 진행방향을 하나 선택
         }

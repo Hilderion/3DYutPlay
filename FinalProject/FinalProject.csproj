@@ -5,12 +5,13 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{1250ECDD-1EF8-45A6-ABBB-B02148A1AE72}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <OutputType>Library</OutputType>
     <RootNamespace>FinalProject</RootNamespace>
     <AssemblyName>FinalProject</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <LangVersion>6</LangVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -43,11 +44,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
+    <Compile Include="Direction.cs" />
+    <Compile Include="Game.cs" />
     <Compile Include="Horse.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Points\CornerPoint.cs" />
     <Compile Include="Points\FieldPoint.cs" />
-    <Compile Include="Points\GoalPoint.cs" />
+    <Compile Include="Points\StartingPoint.cs" />
     <Compile Include="Points\MountainPoint.cs" />
     <Compile Include="Points\Point.cs" />
     <Compile Include="Points\PointType.cs" />
@@ -62,4 +65,7 @@
     <Content Include="좌표.xlsx" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(TargetPath)" "D:\t\3DYutPlay\Game\Assets\References\"</PostBuildEvent>
+  </PropertyGroup>
 </Project>

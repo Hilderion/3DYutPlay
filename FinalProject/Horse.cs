@@ -11,13 +11,13 @@ namespace FinalProject
         {
             switch (horseType)
             {
-                    case HorseType.A:
+                    case HorseType.Offensive:
                         return new Horse(player, 1,0,0);
-                    case HorseType.B:
+                    case HorseType.Heavy:
                         return new Horse(player, 1,1,-1);
-                    case HorseType.C:
+                    case HorseType.Defensive:
                         return new Horse(player, 0,1,0);
-                    case HorseType.D:
+                    case HorseType.Speedy:
                         return new Horse(player, 1,-1,1);
                     default:
                         throw new Exception();
@@ -26,28 +26,44 @@ namespace FinalProject
         
         private Horse(Player player, int weapon, int armor, int speed)
         {
-            _weapon = weapon;
-            _armor = armor;
-            _speed = speed;
+            Weapon = weapon;
+            Armor = armor;
+            Speed = speed;
             Player = player;
+            Point = Board.Instance.StartingPoint;
             
             _carrierees = new List<Horse>();
         }
 
-        private int _weapon;
-        private int _armor;
-        private int _speed;
+        public int Weapon { get; internal set; }
+        public int Armor { get; internal set; }
+        public int Speed { get; internal set; }
 
         public Player Player { get;}
 
         public bool Finished { get; internal set; }
         
         public bool Carried { get; internal set; }
+
+        public Point Point { get; internal set; }
         
         /// <summary>
         /// 업힌 말들. (자신은 포함하지 않음)
         /// </summary>
         private List<Horse> _carrierees = new List<Horse>();
+
+        /// <summary>
+        /// 자신 + 업힌 말들
+        /// </summary>
+        public List<Horse> CarriereesAndSelf
+        {
+            get
+            {
+                var list = _carrierees.ToList();
+                list.Add(this);
+                return list;
+            }
+        }
         
         private Stack<Point> _visitedPoints = new Stack<Point>();
 
@@ -76,20 +92,20 @@ namespace FinalProject
         
         public int MaxWeapon
         {
-            get { return CalculateMaxValue(x => x._weapon); }
+            get { return CalculateMaxValue(x => x.Weapon); }
         }
         
         public int MaxArmor
         {
-            get { return CalculateMaxValue(x => x._armor); }
+            get { return CalculateMaxValue(x => x.Armor); }
         }
         
         public int MinSpeed
         {
             get
             {
-                int minOfCarrierees = _carrierees.Min(x => x._speed);
-                return Math.Min(minOfCarrierees, _speed);
+                int minOfCarrierees = _carrierees.Min(x => x.Speed);
+                return Math.Min(minOfCarrierees, Speed);
             }
         }
         #endregion
@@ -97,9 +113,9 @@ namespace FinalProject
     
     public enum HorseType
     {
-        A,
-        B,
-        C,
-        D
+        Offensive,
+        Heavy,
+        Defensive,
+        Speedy
     }
 }
