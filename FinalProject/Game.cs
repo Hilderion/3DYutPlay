@@ -47,25 +47,26 @@ namespace FinalProject
             ActivePlayer = Players[nextPlayerId];
         }
 
-        public int MoveHorse(HorseType horseType, int dice, out Point point)
-        {
-            Horse horse = ActivePlayer.Horses[(int) horseType];
-            Point next = horse.Point;
-
-            do
-            {
-                next = next.Next;
-                dice--;
-                
-                if ()
-
-                VisitField(next, horse);
-
-                VisitMountain(next);
-            } while (dice == 0 || next.Type == PointType.Corner);
-
-            OnHorseMoved(nextPoint);
-        }
+//        public int MoveHorse(HorseType horseType, int dice, out Point point)
+//        {
+//            Horse horse = ActivePlayer.Horses[(int) horseType];
+//            Point next = horse.Point;
+//
+//            do
+//            {
+//                next = next.Next;
+//                dice--;
+//                
+////                if ()
+//
+//                VisitField(next, horse);
+//
+//                VisitMountain(next);
+//            } while (dice == 0 || next.Type == PointType.Corner);
+//
+////            OnHorseMoved(nextPoint);
+//            throw new Exception();
+//        }
 
         private void VisitField(Point point, Horse horse)
         {

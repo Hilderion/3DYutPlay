@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace FinalProject.TestConsole
 {
@@ -7,6 +9,13 @@ namespace FinalProject.TestConsole
     {
         public static void Main(string[] args)
         {
+            Task<int> task = Task.Run((Func<int>) Action);
+//            task.Wait();
+            Console.WriteLine(task.Result);
+
+            Console.WriteLine(1000);
+            return;
+            
             Game.Instance.Started += InstanceOnStarted;
             Game.Instance.HorseSelecting += InstanceOnHorseSelecting;  
             Game.Instance.HorseMoved += InstanceOnHorseMoved;
@@ -15,7 +24,13 @@ namespace FinalProject.TestConsole
             
 //            Game.Instance.MoveHorse();
         }
-        
+
+        private static int Action()
+        {
+            Thread.Sleep(1000);
+            return 4;
+        }
+
         private static void InstanceOnHorseMoved(object sender, Game.HorseMovedEventArgs e)
         {
             switch (e.Point.Type)
@@ -27,7 +42,7 @@ namespace FinalProject.TestConsole
         {
             Console.WriteLine("select horse");
             
-            Game.Instance.MoveHorse(HorseType.Defensive);
+//            Game.Instance.MoveHorse(HorseType.Defensive);
         }
 
         private static void InstanceOnStarted(object sender, Game.StartedEventArgs e)

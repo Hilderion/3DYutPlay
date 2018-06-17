@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using DefaultNamespace;
 using FinalProject;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
@@ -8,31 +9,46 @@ public class GameController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		Game.Instance.Started += InstanceOnStarted;
-		Game.Instance.HorseSelecting += InstanceOnHorseSelecting;  
-		Game.Instance.HorseMoved += InstanceOnHorseMoved;
+//		Game.Instance.Started += InstanceOnStarted;
+//		Game.Instance.HorseSelecting += InstanceOnHorseSelecting;  
+//		Game.Instance.HorseMoved += InstanceOnHorseMoved;
+//		Game.Instance.Run();
 		
-		Game.Instance.Run();
+		NumberGenerator.Instance.NeumberGenrating += InstanceOnNeumberGenrating;
+		NumberGenerator.Instance.NeumberGenrated += InstanceOnNeumberGenrated;
+		NumberGenerator.Instance.Run();
 	}
 
-	private void InstanceOnHorseMoved(object sender, Game.HorseMovedEventArgs e)
+	private void InstanceOnNeumberGenrating(object sender, NumberGenerator.NeumberGenratingEventArgs e)
 	{
-		Debug.Log(e.Point);
+		StartCoroutine(NewMethod());
 	}
 
-	private void InstanceOnHorseSelecting(object sender, Game.HorseSelectingEventArgs e)
+	private IEnumerator NewMethod()
 	{
-		Debug.Log("select horse");
+		Debug.Log("Run TestRoutine");
+		yield return StartCoroutine(WaitForInstruction());
+		_neumberGenratingEventArgs = null;
+		Debug.Log("Finish TestRoutine");
 	}
 
-	private void InstanceOnStarted(object sender, Game.StartedEventArgs e)
+	IEnumerator WaitForInstruction()
 	{
-		Debug.Log("started");
+		yield return new WaitWhile(() => _neumberGenratingEventArgs == null);
 	}
 
-	public void btnHorseSelection_Click(int horseType)
+	private NumberGenerator.NeumberGenratingEventArgs _neumberGenratingEventArgs;
+
+	private void InstanceOnNeumberGenrated(object sender, NumberGenerator.NeumberGenratedEventArgs e)
 	{
-		Game.Instance.MoveHorse((HorseType) horseType);
+		Debug.Log($"{nameof(e.GeneratedNumber)} = {e.GeneratedNumber}");
+	}
+
+
+	public void btnHorseSelection_Click(int interval)
+	{
+		_neumberGenratingEventArgs = new NumberGenerator.NeumberGenratingEventArgs(interval);
+//		Game.Instance.MoveHorse((HorseType) horseType);
 	}
 	
 	// Update is called once per frame
