@@ -1,11 +1,14 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
-using DefaultNamespace;
 using FinalProject;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
 public class GameController : MonoBehaviour {
+
+	private Generator.NumberGeneratingEventArgs _numberGeneratingEventArgs = null;
+	private Generator.StringGeneratingEventArgs _stringGeneratingArgs = null; 
 
 	// Use this for initialization
 	void Start () {
@@ -14,45 +17,71 @@ public class GameController : MonoBehaviour {
 //		Game.Instance.HorseMoved += InstanceOnHorseMoved;
 //		Game.Instance.Run();
 		
-		NumberGenerator.Instance.NeumberGenrating += InstanceOnNeumberGenrating;
-		NumberGenerator.Instance.NeumberGenrated += InstanceOnNeumberGenrated;
-		NumberGenerator.Instance.Run();
+		Generator.Instance.NumberGenerating += InstanceOnNumberGenerating;
+		Generator.Instance.NumberGenerated += InstanceOnNumberGenerated;
+		Generator.Instance.StringGenerating += InstanceOnStringGenerating;
+		Generator.Instance.StringGenerated += InstanceOnStringGenerated;
+		Generator.Instance.Run();
 	}
 
-	private void InstanceOnNeumberGenrating(object sender, NumberGenerator.NeumberGenratingEventArgs e)
+	private void InstanceOnStringGenerated(object sender, Generator.StringGeneratedEventArgs e)
 	{
-		StartCoroutine(NewMethod());
+		Debug.Log($"[e.Name]");
 	}
 
-	private IEnumerator NewMethod()
-	{
-		Debug.Log("Run TestRoutine");
-		yield return StartCoroutine(WaitForInstruction());
-		_neumberGenratingEventArgs = null;
-		Debug.Log("Finish TestRoutine");
-	}
-
-	IEnumerator WaitForInstruction()
-	{
-		yield return new WaitWhile(() => _neumberGenratingEventArgs == null);
-	}
-
-	private NumberGenerator.NeumberGenratingEventArgs _neumberGenratingEventArgs;
-
-	private void InstanceOnNeumberGenrated(object sender, NumberGenerator.NeumberGenratedEventArgs e)
+	private void InstanceOnNumberGenerated(object sender, Generator.NumberGeneratedEventArgs e)
 	{
 		Debug.Log($"{nameof(e.GeneratedNumber)} = {e.GeneratedNumber}");
 	}
 
-
-	public void btnHorseSelection_Click(int interval)
+	private void InstanceOnStringGenerating(object sender, Generator.StringGeneratingEventArgs e)
 	{
-		_neumberGenratingEventArgs = new NumberGenerator.NeumberGenratingEventArgs(interval);
+		_stringGeneratingArgs = e;
+		StartCoroutine("NewMethod", new Func<bool>(() => _stringGeneratingArgs.Name != null));
+	}
+
+	private void InstanceOnNumberGenerating(object sender, Generator.NumberGeneratingEventArgs e)
+	{
+		_numberGeneratingEventArgs = e;
+		StartCoroutine("NewMethod", new Func<bool>(() => _numberGeneratingEventArgs.Interval != 0));
+//		StartCoroutine(new WaitWhile(() => _numberGeneratingEventArgs.Interval != 0));
+	}
+
+	private IEnumerator NewMethod(object value)
+	{
+		yield return StartCoroutine(WaitForInstruction(value));
+	}
+
+	IEnumerator WaitForInstruction(object value)
+	{
+		yield return new WaitWhile((Func<bool>)value);
+	}
+
+	public void btnGenerationNumber_Click()
+	{
+		_numberGeneratingEventArgs.Interval += 1;
+
 //		Game.Instance.MoveHorse((HorseType) horseType);
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
+	public void btnGenerationString_Click()
+	{
+		_stringGeneratingArgs.Name = DateTime.Now.ToShortDateString();
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
