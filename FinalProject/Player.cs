@@ -22,7 +22,17 @@ namespace FinalProject
 
         public List<Horse> Horses { get; }
 
-        public bool IsWon => Horses.All(x => x.Finished);
+        public Horse this[HorseType horseType]
+        {
+            get { return Horses[(int) horseType]; }
+        }
+
+//        public bool IsWon => Horses.All(x => x.Finished);
+
+        public bool IsWon
+        {
+            get { return Horses.All(x => x.Finished); }
+        }
 
         public void MoveHorse(HorseType horseType, int dice)
         {

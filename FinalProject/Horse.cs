@@ -12,20 +12,21 @@ namespace FinalProject
             switch (horseType)
             {
                     case HorseType.Offensive:
-                        return new Horse(player, 1,0,0);
+                        return new Horse(player, (int) horseType, 1,0,0);
                     case HorseType.Heavy:
-                        return new Horse(player, 1,1,-1);
+                        return new Horse(player, (int) horseType, 1,1,-1);
                     case HorseType.Defensive:
-                        return new Horse(player, 0,1,0);
+                        return new Horse(player, (int) horseType, 0,1,0);
                     case HorseType.Speedy:
-                        return new Horse(player, 1,-1,1);
+                        return new Horse(player, (int) horseType, 1,-1,1);
                     default:
                         throw new Exception();
             }
         }
         
-        private Horse(Player player, int weapon, int armor, int speed)
+        private Horse(Player player, int id, int weapon, int armor, int speed)
         {
+            Id = id;
             Weapon = weapon;
             Armor = armor;
             Speed = speed;
@@ -38,6 +39,8 @@ namespace FinalProject
         public int Weapon { get; internal set; }
         public int Armor { get; internal set; }
         public int Speed { get; internal set; }
+
+        public int Id { get; private  set; }
 
         public Player Player { get;}
 
@@ -79,34 +82,29 @@ namespace FinalProject
 
         public void Decarry()
         {
-            _carrierees.ForEach(x => x.Carried = false);
+//            _carrierees.ForEach(x => x.Carried = false);
+            foreach (var carrieree in _carrierees)
+                carrieree.Carried = false;
             _carrierees.Clear();
         }
 
         #region 최대 공격력/방어력, 최소 이동력
-        private int CalculateMaxValue(Func<Horse, int> func)
-        {
-            int maxOfCarrierees = _carrierees.Max(func);
-            return Math.Max(maxOfCarrierees, func(this));
-        }
-        
         public int MaxWeapon
         {
-            get { return CalculateMaxValue(x => x.Weapon); }
+            get { return CarriereesAndSelf.Max(x => x.Weapon); }
         }
         
         public int MaxArmor
         {
-            get { return CalculateMaxValue(x => x.Armor); }
+            get
+            {
+                return CarriereesAndSelf.Max(x => x.Armor);
+            }
         }
         
         public int MinSpeed
         {
-            get
-            {
-                int minOfCarrierees = _carrierees.Min(x => x.Speed);
-                return Math.Min(minOfCarrierees, Speed);
-            }
+            get { return CarriereesAndSelf.Min(x => x.Speed); }
         }
         #endregion
     }

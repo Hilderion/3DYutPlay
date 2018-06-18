@@ -47,6 +47,30 @@ namespace FinalProject
             ActivePlayer = Players[nextPlayerId];
         }
 
+        public void MoveHorse(HorseType horseType, int dice)
+        {
+            Horse horse = ActivePlayer[horseType];
+
+            Point currentPoint = horse.Point;
+            
+            while (dice > 0)
+            {
+                currentPoint = currentPoint.Next;
+                dice--;
+            }
+            
+            horse.Point = currentPoint;
+
+            if (horse.Point.Type == PointType.Field)
+            {
+                VisitField(currentPoint, horse);
+            }
+            else if (horse.Point.Type == PointType.Mountain)
+            {
+                VisitMountain(currentPoint, horse);
+            }
+        }
+
 //        public int MoveHorse(HorseType horseType, int dice, out Point point)
 //        {
 //            Horse horse = ActivePlayer.Horses[(int) horseType];
@@ -79,15 +103,67 @@ namespace FinalProject
                 h.Weapon += field.Weapon;
                 h.Armor += field.Armor;
             }
+
+            OnFieldPointVisited(horse, field);
         }
 
-        private void VisitMountain(Point point)
+        private void VisitMountain(Point point, Horse horse)
         {
             MountainPoint mountain = point as MountainPoint;
             if (mountain == null)
                 return;
+
+            if (horse.MaxWeapon > 1)
+            {
+                // 승리
+            }
+            else
+            {
+                // 패배
+            }
         }
 
+        #region FieldPointVisited event things for C# 3.0
+        public event EventHandler<FieldPointVisitedEventArgs> FieldPointVisited;
+
+        protected virtual void OnFieldPointVisited(FieldPointVisitedEventArgs e)
+        {
+            if (FieldPointVisited != null)
+                FieldPointVisited(this, e);
+        }
+
+        private FieldPointVisitedEventArgs OnFieldPointVisited(Horse horse  , FieldPoint fieldPoint )
+        {
+            FieldPointVisitedEventArgs args = new FieldPointVisitedEventArgs(horse  , fieldPoint );
+            OnFieldPointVisited(args);
+
+            return args;
+        }
+
+        private FieldPointVisitedEventArgs OnFieldPointVisitedForOut()
+        {
+            FieldPointVisitedEventArgs args = new FieldPointVisitedEventArgs();
+            OnFieldPointVisited(args);
+
+            return args;
+        }
+
+        public class FieldPointVisitedEventArgs : EventArgs
+        {
+            public Horse Horse { get; set;}  
+            public FieldPoint FieldPoint { get; set;} 
+
+            public FieldPointVisitedEventArgs()
+            {
+            }
+	
+            public FieldPointVisitedEventArgs(Horse horse  , FieldPoint fieldPoint )
+            {
+                Horse = horse;  
+                FieldPoint = fieldPoint; 
+            }
+        }
+        #endregion
         #region HorseMoved event things for C# 3.0
         public event EventHandler<HorseMovedEventArgs> HorseMoved;
 

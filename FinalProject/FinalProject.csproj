@@ -44,10 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Board.cs" />
-    <Compile Include="Direction.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Horse.cs" />
-    <Compile Include="NumberGenerator.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="Points\CornerPoint.cs" />
     <Compile Include="Points\FieldPoint.cs" />
@@ -67,6 +65,6 @@
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>copy "$(TargetPath)" "D:\t\3DYutPlay\Game\Assets\References\"</PostBuildEvent>
+    <PostBuildEvent>copy "$(TargetPath)" "D:\vrgit\3DYutPlay\Game\Assets\References\"</PostBuildEvent>
   </PropertyGroup>
 </Project>

@@ -1,6 +1,6 @@
 ﻿namespace FinalProject.Points
 {
-    class FieldPoint : Point
+    public class FieldPoint : Point
     {
         public FieldPoint(int id, params int[] nextIds) : base(id, nextIds)
         {
