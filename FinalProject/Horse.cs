@@ -70,8 +70,9 @@ namespace FinalProject
         
         private Stack<Point> _visitedPoints = new Stack<Point>();
 
-        public void VisitPoint(Point point)
+        public void SaveVisitPoint(Point point)
         {
+            _visitedPoints.Push(point);
         }
 
         public void Carry(Horse carrieree)

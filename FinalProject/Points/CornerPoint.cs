@@ -8,7 +8,7 @@
 
         public override PointType Type => PointType.Corner;
 
-        public override void Execute()
+        public override void Execute(Horse horse)
         {
             //연결된 포인트에서 진행방향을 하나 선택
         }

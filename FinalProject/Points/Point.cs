@@ -14,10 +14,8 @@
         {
             get
             {
-                if (NextIds.Length == 1)
-                    return Board.Instance[NextIds[0]];
-                else
-                    return null;
+                return Board.Instance[NextIds[0]];
+                
             }
         }
 
@@ -25,7 +23,7 @@
 
         public abstract PointType Type { get; }
 
-        public abstract void Execute();
+        public abstract void Execute(Horse horse);
 
         public override string ToString()
         {

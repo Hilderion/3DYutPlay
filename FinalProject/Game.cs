@@ -56,19 +56,12 @@ namespace FinalProject
             while (dice > 0)
             {
                 currentPoint = currentPoint.Next;
+                horse.SaveVisitPoint(currentPoint);
                 dice--;
             }
             
             horse.Point = currentPoint;
-
-            if (horse.Point.Type == PointType.Field)
-            {
-                VisitField(currentPoint, horse);
-            }
-            else if (horse.Point.Type == PointType.Mountain)
-            {
-                VisitMountain(currentPoint, horse);
-            }
+            currentPoint.Execute(horse);
         }
 
 //        public int MoveHorse(HorseType horseType, int dice, out Point point)

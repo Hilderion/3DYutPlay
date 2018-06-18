@@ -11,7 +11,7 @@
         public int Armor { get; internal set; }
         public int Weapon { get; internal set; }
 
-        public override void Execute()
+        public override void Execute(Horse horse)
         {
             //변화할 케이스를 랜덤으로 정한다 (1 : 공격력증가, 2:공격력감소... )
         }
