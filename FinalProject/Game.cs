@@ -61,7 +61,7 @@ namespace FinalProject
             }
             
             horse.Point = currentPoint;
-            currentPoint.Execute(horse);
+            
         }
 
 //        public int MoveHorse(HorseType horseType, int dice, out Point point)

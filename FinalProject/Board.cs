@@ -100,6 +100,7 @@ namespace FinalProject
 
         public void Initialize()
         {
+            Board.Instance.InitializeFieldPoints();
         }
 
         public void InitializeForTest()

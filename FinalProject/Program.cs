@@ -11,7 +11,8 @@ namespace FinalProject
     {
         static void Main(string[] args)
         {
-            
+            Board.Instance.Initialize();
+            Console.WriteLine("end");
         }
     }
 }

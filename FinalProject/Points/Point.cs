@@ -23,8 +23,7 @@
 
         public abstract PointType Type { get; }
 
-        public abstract void Execute(Horse horse);
-
+        
         public override string ToString()
         {
             return Id.ToString();

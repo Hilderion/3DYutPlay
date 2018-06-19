@@ -8,9 +8,6 @@
 
         public override PointType Type => PointType.Starting;
         
-        public override void Execute(Horse horse)
-        {
-            throw new System.NotImplementedException();
-        }
+    
     }
 }
