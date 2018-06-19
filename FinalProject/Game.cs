@@ -55,35 +55,82 @@ namespace FinalProject
             
             while (dice > 0)
             {
-                currentPoint = currentPoint.Next;
+                if (horse.NeedSelectDirection == true)
+                {
+                    currentPoint = SelectDirection(currentPoint);
+                    horse.NeedSelectDirection = false;
+                }
+                else
+                    currentPoint = currentPoint.Next;
+
                 horse.SaveVisitPoint(currentPoint);
                 dice--;
             }
             
             horse.Point = currentPoint;
-            
+
+
+            if (horse.Point.Type == PointType.Field)
+            {
+                VisitField(currentPoint, horse);
+            }
+            else if (horse.Point.Type == PointType.Mountain)
+            {
+                VisitMountain(currentPoint, horse);
+            }
+            else if(horse.Point.Type == PointType.Corner)
+            {
+                VisitCorner(currentPoint, horse);
+            }
+            else if(horse.Point.Type == PointType.Starting)
+            {
+                VisitStrating(currentPoint, horse);
+            }
+
         }
 
-//        public int MoveHorse(HorseType horseType, int dice, out Point point)
-//        {
-//            Horse horse = ActivePlayer.Horses[(int) horseType];
-//            Point next = horse.Point;
-//
-//            do
-//            {
-//                next = next.Next;
-//                dice--;
-//                
-////                if ()
-//
-//                VisitField(next, horse);
-//
-//                VisitMountain(next);
-//            } while (dice == 0 || next.Type == PointType.Corner);
-//
-////            OnHorseMoved(nextPoint);
-//            throw new Exception();
-//        }
+        public Point SelectDirection(Point point)
+        {
+            Point nextPoint;
+            int selectdirection;
+
+            Console.WriteLine("Select one direction");
+            selectdirection = Console.Read();
+            nextPoint = point.Select(selectdirection);
+
+            return nextPoint;
+        }
+
+        private void VisitStrating(Point currentPoint, Horse horse)
+        {
+            horse.Finished = true;
+        }
+
+        private void VisitCorner(Point currentPoint, Horse horse)
+        {
+            horse.NeedSelectDirection = true;
+        }
+
+        //        public int MoveHorse(HorseType horseType, int dice, out Point point)
+        //        {
+        //            Horse horse = ActivePlayer.Horses[(int) horseType];
+        //            Point next = horse.Point;
+        //
+        //            do
+        //            {
+        //                next = next.Next;
+        //                dice--;
+        //                
+        ////                if ()
+        //
+        //                VisitField(next, horse);
+        //
+        //                VisitMountain(next);
+        //            } while (dice == 0 || next.Type == PointType.Corner);
+        //
+        ////            OnHorseMoved(nextPoint);
+        //            throw new Exception();
+        //        }
 
         private void VisitField(Point point, Horse horse)
         {
@@ -106,14 +153,12 @@ namespace FinalProject
             if (mountain == null)
                 return;
 
-            if (horse.MaxWeapon > 1)
+            if (horse.MaxWeapon <= 1)
             {
-                // 승리
+                Point formerpoint = horse.GetFormerPoint();
+                horse.Point = formerpoint;
             }
-            else
-            {
-                // 패배
-            }
+            
         }
 
         #region FieldPointVisited event things for C# 3.0

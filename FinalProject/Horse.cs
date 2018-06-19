@@ -31,6 +31,9 @@ namespace FinalProject
             Armor = armor;
             Speed = speed;
             Player = player;
+            Finished = false;
+            Carried = false;
+            NeedSelectDirection = false;
             Point = Board.Instance.StartingPoint;
             
             _carrierees = new List<Horse>();
@@ -47,6 +50,8 @@ namespace FinalProject
         public bool Finished { get; internal set; }
         
         public bool Carried { get; internal set; }
+
+        public bool NeedSelectDirection { get; internal set; }
 
         public Point Point { get; internal set; }
         
@@ -73,6 +78,11 @@ namespace FinalProject
         public void SaveVisitPoint(Point point)
         {
             _visitedPoints.Push(point);
+        }
+
+        public Point GetFormerPoint()
+        {
+            return _visitedPoints.Pop();
         }
 
         public void Carry(Horse carrieree)

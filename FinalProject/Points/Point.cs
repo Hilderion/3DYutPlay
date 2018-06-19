@@ -19,6 +19,12 @@
             }
         }
 
+        public Point Select(int direction)
+        {
+            return Board.Instance[NextIds[direction]];
+            
+        }
+
         public int Id { get; private set; }
 
         public abstract PointType Type { get; }
